@@ -1,0 +1,109 @@
+ 
+****************************************
+Report : qor
+Design : fir_filter_16_tap
+Version: V-2023.12-SP4
+Date   : Wed Apr 16 18:07:07 2025
+****************************************
+
+
+  Timing Path Group 'INPUTS'
+  -----------------------------------
+  Levels of Logic:              67.00
+  Critical Path Length:          3.99
+  Critical Path Slack:           0.00
+  Critical Path Clk Period:      5.00
+  Total Negative Slack:          0.00
+  No. of Violating Paths:        0.00
+  Worst Hold Violation:          0.00
+  Total Hold Violation:          0.00
+  No. of Hold Violations:        0.00
+  -----------------------------------
+
+  Timing Path Group 'OUTPUTS'
+  -----------------------------------
+  Levels of Logic:               0.00
+  Critical Path Length:          0.05
+  Critical Path Slack:           3.95
+  Critical Path Clk Period:      5.00
+  Total Negative Slack:          0.00
+  No. of Violating Paths:        0.00
+  Worst Hold Violation:          0.00
+  Total Hold Violation:          0.00
+  No. of Hold Violations:        0.00
+  -----------------------------------
+
+  Timing Path Group 'clock'
+  -----------------------------------
+  Levels of Logic:              79.00
+  Critical Path Length:          4.98
+  Critical Path Slack:           0.01
+  Critical Path Clk Period:      5.00
+  Total Negative Slack:          0.00
+  No. of Violating Paths:        0.00
+  Worst Hold Violation:          0.00
+  Total Hold Violation:          0.00
+  No. of Hold Violations:        0.00
+  -----------------------------------
+
+
+  Cell Count
+  -----------------------------------
+  Hierarchical Cell Count:        703
+  Hierarchical Port Count:      23695
+  Leaf Cell Count:              26680
+  Buf/Inv Cell Count:            7810
+  Buf Cell Count:                2050
+  Inv Cell Count:                5828
+  CT Buf/Inv Cell Count:            0
+  Combinational Cell Count:     26392
+  Sequential Cell Count:          288
+  Macro Count:                      0
+  -----------------------------------
+
+
+  Area
+  -----------------------------------
+  Combinational Area:    13606.601679
+  Noncombinational Area:   306.892811
+  Buf/Inv Area:           1772.447996
+  Total Buffer Area:           653.12
+  Total Inverter Area:        1200.75
+  Macro/Black Box Area:      0.000000
+  Net Area:              12044.577934
+  -----------------------------------
+  Cell Area:             13913.494490
+  Design Area:           25958.072424
+
+
+  Design Rules
+  -----------------------------------
+  Total Number of Nets:         35943
+  Nets With Violations:             0
+  Max Trans Violations:             0
+  Max Cap Violations:               0
+  -----------------------------------
+
+
+  Hostname: synopsys.vit.ac.in
+
+  Compile CPU Statistics
+  -----------------------------------------
+  Resource Sharing:                   18.97
+  Logic Optimization:                121.22
+  Mapping Optimization:              103.02
+  -----------------------------------------
+  Overall Compile Time:              374.63
+  Overall Compile Wall Clock Time:   335.83
+
+  --------------------------------------------------------------------
+
+  Design  WNS: 0.00  TNS: 0.00  Number of Violating Paths: 0
+
+
+  Design (Hold)  WNS: 0.00  TNS: 0.00  Number of Violating Paths: 0
+
+  --------------------------------------------------------------------
+
+
+1

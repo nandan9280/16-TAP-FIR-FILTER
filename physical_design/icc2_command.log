@@ -1,0 +1,26 @@
+#@ # 
+#@ # Running icc2_shell Version V-2023.12-SP4 for linux64 -- Jun 03, 2024
+#@ # Date:   Thu Apr 17 16:36:03 2025
+#@ # Run by: 24mvd0059@synopsys.vit.ac.in
+#@ 
+
+open_lib lib
+open_block route_done
+source post_route_reports.tcl
+report_drc -summary > ./report/final_drc_summary.rpt
+report_drc > ./report/final_drc_full.rpt
+report_area
+report_timing -max_paths 100 -delay_type max -path_type full -significant_digits 4 > ./report/final_setup_timing.rpt
+current_design
+report_timing -max_paths 100 -delay_type max -path_type full -significant_digits 4
+report_timing -max_paths 100 -delay_type min -path_type full -significant_digits 4
+report_qor -summary
+report_qor
+report_power
+reset_switching_activity
+report_power
+set_switching_activity -static_probability 0.5 -toggle_rate 0.2 [all_nets]
+set_switching_activity -static_probability 0.5 -toggle_rate 0.2
+set_switching_activity -static_probability 0.5 -toggle_rate 0.2 -help
+man set_switching_activity
+exit

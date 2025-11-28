@@ -1,0 +1,462 @@
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : fir_filter_16tap
+Version: V-2023.12-SP4
+Date   : Fri May 30 17:38:34 2025
+****************************************
+
+Operating Conditions: ss0p72v25c   Library: saed14rvt_base_ss0p72v25c
+Wire Load Model Mode: top
+
+  Startpoint: tap8_reg_0_
+              (rising edge-triggered flip-flop clocked by clock)
+  Endpoint: y_out_reg_31_
+            (rising edge-triggered flip-flop clocked by clock)
+  Path Group: CLOCK
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fir_filter_16tap   8000                  saed14rvt_base_tt0p8v25c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clock (rise edge)                                 0.00       0.00
+  clock network delay (ideal)                             1.50       1.50
+  tap8_reg_0_/CK (SAEDHVT14_FDPRBQ_V2LP_1)                0.00       1.50 r
+  tap8_reg_0_/Q (SAEDHVT14_FDPRBQ_V2LP_1)                 0.20       1.70 f
+  m8/A[0] (booth_multiplier_16x16_8)                      0.00       1.70 f
+  m8/U62/X (SAEDHVT14_INV_S_1P5)                          0.36       2.07 r
+  m8/U141/X (SAEDRVT14_DEL_R2V2_1)                        0.46       2.53 r
+  m8/add_17_I3_U1_1_3/S (SAEDHVT14_ADDH_1)                0.09       2.61 f
+  m8/U307/X (SAEDHVT14_INV_S_0P5)                         0.23       2.84 r
+  m8/U52/X (SAEDHVT14_OAI22_3)                            0.07       2.91 f
+  m8/add_8_root_add_0_root_add_20_I16/A[3] (booth_multiplier_16x16_8_DW01_add_2_DW01_add_107)
+                                                          0.00       2.91 f
+  m8/add_8_root_add_0_root_add_20_I16/U1_3/S (SAEDRVT14_ADDF_V1_2)
+                                                          0.08       2.99 r
+  m8/add_8_root_add_0_root_add_20_I16/SUM[3] (booth_multiplier_16x16_8_DW01_add_2_DW01_add_107)
+                                                          0.00       2.99 r
+  m8/add_1_root_add_0_root_add_20_I16/B[3] (booth_multiplier_16x16_8_DW01_add_1_DW01_add_106)
+                                                          0.00       2.99 r
+  m8/add_1_root_add_0_root_add_20_I16/U2/X (SAEDRVT14_EO2_3)
+                                                          0.04       3.03 f
+  m8/add_1_root_add_0_root_add_20_I16/SUM[3] (booth_multiplier_16x16_8_DW01_add_1_DW01_add_106)
+                                                          0.00       3.03 f
+  m8/add_0_root_add_0_root_add_20_I16/A[3] (booth_multiplier_16x16_8_DW01_add_0_DW01_add_105)
+                                                          0.00       3.03 f
+  m8/add_0_root_add_0_root_add_20_I16/U1_3/S (SAEDHVT14_ADDF_V1_1)
+                                                          0.06       3.08 r
+  m8/add_0_root_add_0_root_add_20_I16/SUM[3] (booth_multiplier_16x16_8_DW01_add_0_DW01_add_105)
+                                                          0.00       3.08 r
+  m8/P[3] (booth_multiplier_16x16_8)                      0.00       3.08 r
+  adder4/A[3] (ripple_carry_adder_32bit_11)               0.00       3.08 r
+  adder4/FA3/a (full_adder_349)                           0.00       3.08 r
+  adder4/FA3/U1/X (SAEDHVT14_INV_S_0P5)                   0.06       3.14 f
+  adder4/FA3/U2/X (SAEDHVT14_EO2_0P5)                     0.09       3.24 r
+  adder4/FA3/U3/X (SAEDHVT14_OAI22_0P5)                   0.08       3.31 f
+  adder4/FA3/carry (full_adder_349)                       0.00       3.31 f
+  adder4/FA4/cin (full_adder_348)                         0.00       3.31 f
+  adder4/FA4/U1/X (SAEDHVT14_INV_S_0P5)                   0.10       3.41 r
+  adder4/FA4/U5/X (SAEDRVT14_NR2_5)                       0.04       3.45 f
+  adder4/FA4/U6/X (SAEDRVT14_OR2_MM_20)                   0.02       3.47 f
+  adder4/FA4/carry (full_adder_348)                       0.00       3.47 f
+  adder4/FA5/cin (full_adder_347)                         0.00       3.47 f
+  adder4/FA5/U5/X (SAEDHVT14_INV_S_20)                    0.00       3.47 r
+  adder4/FA5/U2/X (SAEDHVT14_OAI22_0P5)                   0.05       3.52 f
+  adder4/FA5/carry (full_adder_347)                       0.00       3.52 f
+  adder4/FA6/cin (full_adder_346)                         0.00       3.52 f
+  adder4/FA6/U2/X (SAEDHVT14_INV_S_0P5)                   0.10       3.61 r
+  adder4/FA6/U3/X (SAEDHVT14_OAI22_2)                     0.06       3.67 f
+  adder4/FA6/carry (full_adder_346)                       0.00       3.67 f
+  adder4/FA7/cin (full_adder_345)                         0.00       3.67 f
+  adder4/FA7/U3/X (SAEDHVT14_INV_4)                       0.02       3.69 r
+  adder4/FA7/U1/X (SAEDHVT14_OAI22_3)                     0.02       3.72 f
+  adder4/FA7/carry (full_adder_345)                       0.00       3.72 f
+  adder4/FA8/cin (full_adder_344)                         0.00       3.72 f
+  adder4/FA8/U3/X (SAEDHVT14_INV_S_0P75)                  0.06       3.77 r
+  adder4/FA8/U2/X (SAEDHVT14_OR2_4)                       0.03       3.80 r
+  adder4/FA8/U10/X (SAEDHVT14_ND2_8)                      0.01       3.81 f
+  adder4/FA8/carry (full_adder_344)                       0.00       3.81 f
+  adder4/FA9/cin (full_adder_343)                         0.00       3.81 f
+  adder4/FA9/U1/X (SAEDHVT14_INV_S_2)                     0.02       3.83 r
+  adder4/FA9/U3/X (SAEDHVT14_OAI22_0P5)                   0.06       3.89 f
+  adder4/FA9/carry (full_adder_343)                       0.00       3.89 f
+  adder4/FA10/cin (full_adder_342)                        0.00       3.89 f
+  adder4/FA10/U1/X (SAEDHVT14_INV_S_1)                    0.06       3.95 r
+  adder4/FA10/U3/X (SAEDHVT14_OAI22_2)                    0.04       3.99 f
+  adder4/FA10/carry (full_adder_342)                      0.00       3.99 f
+  adder4/FA11/cin (full_adder_341)                        0.00       3.99 f
+  adder4/FA11/U2/X (SAEDHVT14_INV_S_4)                    0.02       4.02 r
+  adder4/FA11/U1/X (SAEDHVT14_OAI22_0P75)                 0.04       4.06 f
+  adder4/FA11/carry (full_adder_341)                      0.00       4.06 f
+  adder4/FA12/cin (full_adder_340)                        0.00       4.06 f
+  adder4/FA12/U1/X (SAEDHVT14_INV_S_1)                    0.06       4.12 r
+  adder4/FA12/U2/X (SAEDHVT14_OAI22_4)                    0.03       4.15 f
+  adder4/FA12/carry (full_adder_340)                      0.00       4.15 f
+  adder4/FA13/cin (full_adder_339)                        0.00       4.15 f
+  adder4/FA13/U2/X (SAEDHVT14_INV_S_4)                    0.02       4.17 r
+  adder4/FA13/U1/X (SAEDHVT14_OAI22_4)                    0.02       4.19 f
+  adder4/FA13/carry (full_adder_339)                      0.00       4.19 f
+  adder4/FA14/cin (full_adder_338)                        0.00       4.19 f
+  adder4/FA14/U1/X (SAEDHVT14_INV_S_2)                    0.03       4.22 r
+  adder4/FA14/U3/X (SAEDHVT14_OAI22_4)                    0.02       4.24 f
+  adder4/FA14/carry (full_adder_338)                      0.00       4.24 f
+  adder4/FA15/cin (full_adder_337)                        0.00       4.24 f
+  adder4/FA15/U1/X (SAEDHVT14_INV_S_2)                    0.03       4.28 r
+  adder4/FA15/U2/X (SAEDHVT14_OAI22_4)                    0.03       4.30 f
+  adder4/FA15/carry (full_adder_337)                      0.00       4.30 f
+  adder4/FA16/cin (full_adder_336)                        0.00       4.30 f
+  adder4/FA16/U2/X (SAEDHVT14_INV_S_10)                   0.01       4.32 r
+  adder4/FA16/U1/X (SAEDHVT14_OAI22_3)                    0.02       4.34 f
+  adder4/FA16/carry (full_adder_336)                      0.00       4.34 f
+  adder4/FA17/cin (full_adder_335)                        0.00       4.34 f
+  adder4/FA17/U1/X (SAEDHVT14_INV_S_0P75)                 0.05       4.39 r
+  adder4/FA17/U2/X (SAEDHVT14_OAI22_0P5)                  0.07       4.46 f
+  adder4/FA17/carry (full_adder_335)                      0.00       4.46 f
+  adder4/FA18/cin (full_adder_334)                        0.00       4.46 f
+  adder4/FA18/U2/X (SAEDHVT14_INV_S_1)                    0.07       4.53 r
+  adder4/FA18/U1/X (SAEDHVT14_OAI22_3)                    0.04       4.56 f
+  adder4/FA18/carry (full_adder_334)                      0.00       4.56 f
+  adder4/FA19/cin (full_adder_333)                        0.00       4.56 f
+  adder4/FA19/U2/X (SAEDHVT14_INV_S_5)                    0.02       4.58 r
+  adder4/FA19/U1/X (SAEDHVT14_OAI22_4)                    0.02       4.61 f
+  adder4/FA19/carry (full_adder_333)                      0.00       4.61 f
+  adder4/FA20/cin (full_adder_332)                        0.00       4.61 f
+  adder4/FA20/U1/X (SAEDHVT14_INV_S_10)                   0.01       4.62 r
+  adder4/FA20/U2/X (SAEDHVT14_OAI22_4)                    0.02       4.64 f
+  adder4/FA20/carry (full_adder_332)                      0.00       4.64 f
+  adder4/FA21/cin (full_adder_331)                        0.00       4.64 f
+  adder4/FA21/U1/X (SAEDHVT14_INV_6)                      0.02       4.66 r
+  adder4/FA21/U2/X (SAEDHVT14_OAI22_4)                    0.02       4.68 f
+  adder4/FA21/carry (full_adder_331)                      0.00       4.68 f
+  adder4/FA22/cin (full_adder_330)                        0.00       4.68 f
+  adder4/FA22/U6/X (SAEDHVT14_INV_4)                      0.02       4.70 r
+  adder4/FA22/U4/X (SAEDHVT14_OR2_4)                      0.02       4.72 r
+  adder4/FA22/U5/X (SAEDHVT14_ND2_8)                      0.01       4.73 f
+  adder4/FA22/carry (full_adder_330)                      0.00       4.73 f
+  adder4/FA23/cin (full_adder_329)                        0.00       4.73 f
+  adder4/FA23/U3/X (SAEDHVT14_INV_12)                     0.01       4.73 r
+  adder4/FA23/U5/X (SAEDHVT14_OR2_4)                      0.02       4.75 r
+  adder4/FA23/U6/X (SAEDHVT14_ND2_8)                      0.01       4.76 f
+  adder4/FA23/carry (full_adder_329)                      0.00       4.76 f
+  adder4/FA24/cin (full_adder_328)                        0.00       4.76 f
+  adder4/FA24/U1/X (SAEDHVT14_INV_S_9)                    0.01       4.77 r
+  adder4/FA24/U6/X (SAEDHVT14_OR2_MM_0P75)                0.03       4.80 r
+  adder4/FA24/U4/X (SAEDHVT14_ND2_MM_0P5)                 0.03       4.83 f
+  adder4/FA24/carry (full_adder_328)                      0.00       4.83 f
+  adder4/FA25/cin (full_adder_327)                        0.00       4.83 f
+  adder4/FA25/U1/X (SAEDHVT14_INV_S_0P75)                 0.06       4.88 r
+  adder4/FA25/U2/X (SAEDHVT14_OAI22_0P5)                  0.07       4.95 f
+  adder4/FA25/carry (full_adder_327)                      0.00       4.95 f
+  adder4/FA26/cin (full_adder_326)                        0.00       4.95 f
+  adder4/FA26/U2/X (SAEDHVT14_INV_S_0P5)                  0.10       5.05 r
+  adder4/FA26/U1/X (SAEDHVT14_OAI22_4)                    0.04       5.10 f
+  adder4/FA26/carry (full_adder_326)                      0.00       5.10 f
+  adder4/FA27/cin (full_adder_325)                        0.00       5.10 f
+  adder4/FA27/U7/X (SAEDHVT14_INV_S_8)                    0.01       5.11 r
+  adder4/FA27/U5/X (SAEDRVT14_OR2_MM_16)                  0.02       5.13 r
+  adder4/FA27/U6/X (SAEDHVT14_ND2_16)                     0.01       5.14 f
+  adder4/FA27/carry (full_adder_325)                      0.00       5.14 f
+  adder4/FA28/cin (full_adder_324)                        0.00       5.14 f
+  adder4/FA28/U1/X (SAEDHVT14_INV_12)                     0.01       5.14 r
+  adder4/FA28/U2/X (SAEDHVT14_OAI22_3)                    0.02       5.16 f
+  adder4/FA28/carry (full_adder_324)                      0.00       5.16 f
+  adder4/FA29/cin (full_adder_323)                        0.00       5.16 f
+  adder4/FA29/U1/X (SAEDHVT14_INV_S_0P75)                 0.05       5.22 r
+  adder4/FA29/U2/X (SAEDHVT14_OAI22_0P5)                  0.07       5.28 f
+  adder4/FA29/carry (full_adder_323)                      0.00       5.28 f
+  adder4/FA30/cin (full_adder_322)                        0.00       5.28 f
+  adder4/FA30/U1/X (SAEDHVT14_INV_S_0P5)                  0.09       5.38 r
+  adder4/FA30/U2/X (SAEDHVT14_OAI22_0P5)                  0.08       5.45 f
+  adder4/FA30/carry (full_adder_322)                      0.00       5.45 f
+  adder4/FA31/cin (full_adder_321)                        0.00       5.45 f
+  adder4/FA31/U1/X (SAEDHVT14_INV_S_0P5)                  0.09       5.55 r
+  adder4/FA31/U2/X (SAEDHVT14_EO2_0P5)                    0.09       5.64 f
+  adder4/FA31/sum (full_adder_321)                        0.00       5.64 f
+  adder4/Sum[31] (ripple_carry_adder_32bit_11)            0.00       5.64 f
+  adder10/A[31] (ripple_carry_adder_32bit_5)              0.00       5.64 f
+  adder10/FA31/a (full_adder_129)                         0.00       5.64 f
+  adder10/FA31/U7/X (SAEDHVT14_INV_S_0P5)                 0.10       5.73 r
+  adder10/FA31/U4/X (SAEDHVT14_ND2_MM_0P5)                0.06       5.79 f
+  adder10/FA31/U2/X (SAEDHVT14_ND2_MM_0P5)                0.08       5.87 r
+  adder10/FA31/U6/X (SAEDHVT14_EO2_V1_1P5)                0.08       5.95 f
+  adder10/FA31/sum (full_adder_129)                       0.00       5.95 f
+  adder10/Sum[31] (ripple_carry_adder_32bit_5)            0.00       5.95 f
+  adder13/A[31] (ripple_carry_adder_32bit_2)              0.00       5.95 f
+  adder13/FA31/a (full_adder_33)                          0.00       5.95 f
+  adder13/FA31/U4/X (SAEDHVT14_INV_S_0P5)                 0.10       6.06 r
+  adder13/FA31/U2/X (SAEDHVT14_ND2_MM_4)                  0.03       6.08 f
+  adder13/FA31/U1/X (SAEDHVT14_ND2_CDC_4)                 0.02       6.10 r
+  adder13/FA31/U7/X (SAEDRVT14_EO2_3)                     0.03       6.13 r
+  adder13/FA31/sum (full_adder_33)                        0.00       6.13 r
+  adder13/Sum[31] (ripple_carry_adder_32bit_2)            0.00       6.13 r
+  adder14/B[31] (ripple_carry_adder_32bit_1)              0.00       6.13 r
+  adder14/FA31/b (full_adder_1)                           0.00       6.13 r
+  adder14/FA31/U3/X (SAEDRVT14_EO2_3)                     0.04       6.17 f
+  adder14/FA31/U2/X (SAEDRVT14_EO2_2)                     0.03       6.20 r
+  adder14/FA31/sum (full_adder_1)                         0.00       6.20 r
+  adder14/Sum[31] (ripple_carry_adder_32bit_1)            0.00       6.20 r
+  y_out_reg_31_/D (SAEDHVT14_FDPRBQ_V2LP_1)               0.00       6.20 r
+  data arrival time                                                  6.20
+
+  clock clock (rise edge)                                 5.00       5.00
+  clock network delay (ideal)                             1.50       6.50
+  clock uncertainty                                      -0.30       6.20
+  y_out_reg_31_/CK (SAEDHVT14_FDPRBQ_V2LP_1)              0.00       6.20 r
+  library setup time                                      0.02       6.22
+  data required time                                                 6.22
+  --------------------------------------------------------------------------
+  data required time                                                 6.22
+  data arrival time                                                 -6.20
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.02
+
+
+  Startpoint: h6[2] (input port clocked by clock)
+  Endpoint: y_out_reg_31_
+            (rising edge-triggered flip-flop clocked by clock)
+  Path Group: INPUTS
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fir_filter_16tap   8000                  saed14rvt_base_tt0p8v25c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clock (rise edge)                                 0.00       0.00
+  clock network delay (ideal)                             1.50       1.50
+  input external delay                                    1.00       2.50 r
+  h6[2] (in)                                              0.01       2.51 r
+  m6/B[2] (booth_multiplier_16x16_10)                     0.00       2.51 r
+  m6/U111/X (SAEDHVT14_INV_S_0P5)                         0.05       2.57 f
+  m6/U29/X (SAEDHVT14_ND2_MM_0P5)                         0.36       2.93 r
+  m6/U19/CKOUT (SAEDHVT14_CLKSPLT_8)                      0.11       3.04 r
+  m6/U18/X (SAEDHVT14_OAI22_4)                            0.03       3.07 f
+  m6/add_9_root_add_0_root_add_20_I16/B[3] (booth_multiplier_16x16_10_DW01_add_6_DW01_add_141)
+                                                          0.00       3.07 f
+  m6/add_9_root_add_0_root_add_20_I16/SUM[3] (booth_multiplier_16x16_10_DW01_add_6_DW01_add_141)
+                                                          0.00       3.07 f
+  m6/add_3_root_add_0_root_add_20_I16/A[3] (booth_multiplier_16x16_10_DW01_add_5_DW01_add_140)
+                                                          0.00       3.07 f
+  m6/add_3_root_add_0_root_add_20_I16/SUM[3] (booth_multiplier_16x16_10_DW01_add_5_DW01_add_140)
+                                                          0.00       3.07 f
+  m6/add_2_root_add_0_root_add_20_I16/A[3] (booth_multiplier_16x16_10_DW01_add_3_DW01_add_138)
+                                                          0.00       3.07 f
+  m6/add_2_root_add_0_root_add_20_I16/SUM[3] (booth_multiplier_16x16_10_DW01_add_3_DW01_add_138)
+                                                          0.00       3.07 f
+  m6/add_1_root_add_0_root_add_20_I16/A[3] (booth_multiplier_16x16_10_DW01_add_1_DW01_add_136)
+                                                          0.00       3.07 f
+  m6/add_1_root_add_0_root_add_20_I16/U1/X (SAEDHVT14_BUF_S_0P5)
+                                                          0.07       3.13 f
+  m6/add_1_root_add_0_root_add_20_I16/U4/X (SAEDHVT14_EO2_0P5)
+                                                          0.07       3.21 r
+  m6/add_1_root_add_0_root_add_20_I16/SUM[3] (booth_multiplier_16x16_10_DW01_add_1_DW01_add_136)
+                                                          0.00       3.21 r
+  m6/add_0_root_add_0_root_add_20_I16/A[3] (booth_multiplier_16x16_10_DW01_add_0_DW01_add_135)
+                                                          0.00       3.21 r
+  m6/add_0_root_add_0_root_add_20_I16/U1_3/S (SAEDHVT14_ADDF_V1_1)
+                                                          0.07       3.28 f
+  m6/add_0_root_add_0_root_add_20_I16/SUM[3] (booth_multiplier_16x16_10_DW01_add_0_DW01_add_135)
+                                                          0.00       3.28 f
+  m6/P[3] (booth_multiplier_16x16_10)                     0.00       3.28 f
+  adder3/A[3] (ripple_carry_adder_32bit_12)               0.00       3.28 f
+  adder3/FA3/a (full_adder_381)                           0.00       3.28 f
+  adder3/FA3/U6/X (SAEDHVT14_INV_S_0P5)                   0.07       3.35 r
+  adder3/FA3/U3/X (SAEDHVT14_EO2_0P5)                     0.09       3.44 r
+  adder3/FA3/U4/X (SAEDHVT14_OAI22_0P5)                   0.08       3.52 f
+  adder3/FA3/carry (full_adder_381)                       0.00       3.52 f
+  adder3/FA4/cin (full_adder_380)                         0.00       3.52 f
+  adder3/FA4/U6/X (SAEDHVT14_INV_S_0P5)                   0.09       3.61 r
+  adder3/FA4/U3/X (SAEDHVT14_OAI22_0P5)                   0.08       3.69 f
+  adder3/FA4/carry (full_adder_380)                       0.00       3.69 f
+  adder3/FA5/cin (full_adder_379)                         0.00       3.69 f
+  adder3/FA5/U4/X (SAEDHVT14_INV_S_0P5)                   0.09       3.78 r
+  adder3/FA5/U2/X (SAEDHVT14_OR2_1)                       0.05       3.83 r
+  adder3/FA5/U1/X (SAEDHVT14_ND2_MM_4)                    0.02       3.85 f
+  adder3/FA5/carry (full_adder_379)                       0.00       3.85 f
+  adder3/FA6/cin (full_adder_378)                         0.00       3.85 f
+  adder3/FA6/U7/X (SAEDHVT14_INV_12)                      0.01       3.86 r
+  adder3/FA6/U5/X (SAEDRVT14_OR2_MM_16)                   0.01       3.87 r
+  adder3/FA6/U6/X (SAEDHVT14_ND2_16)                      0.01       3.88 f
+  adder3/FA6/carry (full_adder_378)                       0.00       3.88 f
+  adder3/FA7/cin (full_adder_377)                         0.00       3.88 f
+  adder3/FA7/U2/X (SAEDHVT14_INV_12)                      0.01       3.88 r
+  adder3/FA7/U1/X (SAEDHVT14_OAI22_0P75)                  0.03       3.92 f
+  adder3/FA7/carry (full_adder_377)                       0.00       3.92 f
+  adder3/FA8/cin (full_adder_376)                         0.00       3.92 f
+  adder3/FA8/U1/X (SAEDHVT14_INV_S_0P75)                  0.06       3.98 r
+  adder3/FA8/U2/X (SAEDHVT14_OAI22_0P75)                  0.06       4.05 f
+  adder3/FA8/carry (full_adder_376)                       0.00       4.05 f
+  adder3/FA9/cin (full_adder_375)                         0.00       4.05 f
+  adder3/FA9/U1/X (SAEDHVT14_INV_4)                       0.03       4.08 r
+  adder3/FA9/U2/X (SAEDHVT14_OAI22_4)                     0.02       4.10 f
+  adder3/FA9/carry (full_adder_375)                       0.00       4.10 f
+  adder3/FA10/cin (full_adder_374)                        0.00       4.10 f
+  adder3/FA10/U3/X (SAEDHVT14_INV_S_2)                    0.03       4.13 r
+  adder3/FA10/U7/X (SAEDRVT14_OR2_MM_16)                  0.02       4.15 r
+  adder3/FA10/U8/X (SAEDHVT14_ND2_16)                     0.01       4.16 f
+  adder3/FA10/carry (full_adder_374)                      0.00       4.16 f
+  adder3/FA11/cin (full_adder_373)                        0.00       4.16 f
+  adder3/FA11/U2/X (SAEDHVT14_INV_12)                     0.01       4.17 r
+  adder3/FA11/U1/X (SAEDHVT14_OAI22_3)                    0.02       4.18 f
+  adder3/FA11/carry (full_adder_373)                      0.00       4.18 f
+  adder3/FA12/cin (full_adder_372)                        0.00       4.18 f
+  adder3/FA12/U1/X (SAEDHVT14_INV_S_2)                    0.03       4.22 r
+  adder3/FA12/U2/X (SAEDHVT14_OAI22_3)                    0.03       4.24 f
+  adder3/FA12/carry (full_adder_372)                      0.00       4.24 f
+  adder3/FA13/cin (full_adder_371)                        0.00       4.24 f
+  adder3/FA13/U1/X (SAEDHVT14_INV_S_1P5)                  0.04       4.28 r
+  adder3/FA13/U2/X (SAEDHVT14_OAI22_3)                    0.03       4.31 f
+  adder3/FA13/carry (full_adder_371)                      0.00       4.31 f
+  adder3/FA14/cin (full_adder_370)                        0.00       4.31 f
+  adder3/FA14/U1/X (SAEDHVT14_INV_S_2)                    0.03       4.34 r
+  adder3/FA14/U3/X (SAEDHVT14_OAI22_4)                    0.02       4.36 f
+  adder3/FA14/carry (full_adder_370)                      0.00       4.36 f
+  adder3/FA15/cin (full_adder_369)                        0.00       4.36 f
+  adder3/FA15/U1/X (SAEDHVT14_INV_S_3)                    0.03       4.39 r
+  adder3/FA15/U2/X (SAEDHVT14_OAI22_3)                    0.02       4.41 f
+  adder3/FA15/carry (full_adder_369)                      0.00       4.41 f
+  adder3/FA16/cin (full_adder_368)                        0.00       4.41 f
+  adder3/FA16/U1/X (SAEDHVT14_INV_S_2)                    0.03       4.45 r
+  adder3/FA16/U2/X (SAEDHVT14_OAI22_4)                    0.02       4.47 f
+  adder3/FA16/carry (full_adder_368)                      0.00       4.47 f
+  adder3/FA17/cin (full_adder_367)                        0.00       4.47 f
+  adder3/FA17/U1/X (SAEDHVT14_INV_S_3)                    0.03       4.49 r
+  adder3/FA17/U2/X (SAEDHVT14_OAI22_3)                    0.02       4.52 f
+  adder3/FA17/carry (full_adder_367)                      0.00       4.52 f
+  adder3/FA18/cin (full_adder_366)                        0.00       4.52 f
+  adder3/FA18/U1/X (SAEDHVT14_INV_3)                      0.03       4.55 r
+  adder3/FA18/U6/X (SAEDHVT14_OAI22_4)                    0.02       4.57 f
+  adder3/FA18/carry (full_adder_366)                      0.00       4.57 f
+  adder3/FA19/cin (full_adder_365)                        0.00       4.57 f
+  adder3/FA19/U2/X (SAEDHVT14_INV_S_3)                    0.02       4.60 r
+  adder3/FA19/U4/X (SAEDHVT14_OAI22_2)                    0.03       4.63 f
+  adder3/FA19/carry (full_adder_365)                      0.00       4.63 f
+  adder3/FA20/cin (full_adder_364)                        0.00       4.63 f
+  adder3/FA20/U1/X (SAEDHVT14_INV_S_0P75)                 0.06       4.69 r
+  adder3/FA20/U2/X (SAEDHVT14_OAI22_2)                    0.05       4.74 f
+  adder3/FA20/carry (full_adder_364)                      0.00       4.74 f
+  adder3/FA21/cin (full_adder_363)                        0.00       4.74 f
+  adder3/FA21/U7/X (SAEDHVT14_INV_6)                      0.02       4.76 r
+  adder3/FA21/U5/X (SAEDRVT14_OR2_MM_16)                  0.02       4.78 r
+  adder3/FA21/U6/X (SAEDHVT14_ND2_16)                     0.01       4.78 f
+  adder3/FA21/carry (full_adder_363)                      0.00       4.78 f
+  adder3/FA22/cin (full_adder_362)                        0.00       4.78 f
+  adder3/FA22/U2/X (SAEDHVT14_INV_12)                     0.01       4.79 r
+  adder3/FA22/U6/X (SAEDRVT14_OR2_MM_16)                  0.01       4.80 r
+  adder3/FA22/U7/X (SAEDHVT14_ND2_16)                     0.01       4.81 f
+  adder3/FA22/carry (full_adder_362)                      0.00       4.81 f
+  adder3/FA23/cin (full_adder_361)                        0.00       4.81 f
+  adder3/FA23/U1/X (SAEDHVT14_INV_S_5)                    0.01       4.82 r
+  adder3/FA23/U2/X (SAEDHVT14_OAI22_0P5)                  0.05       4.87 f
+  adder3/FA23/carry (full_adder_361)                      0.00       4.87 f
+  adder3/FA24/cin (full_adder_360)                        0.00       4.87 f
+  adder3/FA24/U2/X (SAEDHVT14_INV_S_0P5)                  0.10       4.97 r
+  adder3/FA24/U1/X (SAEDHVT14_OAI22_3)                    0.04       5.01 f
+  adder3/FA24/carry (full_adder_360)                      0.00       5.01 f
+  adder3/FA25/cin (full_adder_359)                        0.00       5.01 f
+  adder3/FA25/U4/X (SAEDHVT14_INV_S_1P5)                  0.04       5.05 r
+  adder3/FA25/U2/X (SAEDHVT14_NR2_8)                      0.02       5.07 f
+  adder3/FA25/U3/X (SAEDHVT14_OR2_MM_3)                   0.03       5.10 f
+  adder3/FA25/carry (full_adder_359)                      0.00       5.10 f
+  adder3/FA26/cin (full_adder_358)                        0.00       5.10 f
+  adder3/FA26/U1/X (SAEDHVT14_INV_S_10)                   0.01       5.10 r
+  adder3/FA26/U2/X (SAEDHVT14_OAI22_4)                    0.02       5.12 f
+  adder3/FA26/carry (full_adder_358)                      0.00       5.12 f
+  adder3/FA27/cin (full_adder_357)                        0.00       5.12 f
+  adder3/FA27/U3/X (SAEDHVT14_INV_4)                      0.02       5.14 r
+  adder3/FA27/U6/X (SAEDRVT14_OR2_MM_16)                  0.02       5.16 r
+  adder3/FA27/U7/X (SAEDHVT14_ND2_16)                     0.01       5.17 f
+  adder3/FA27/carry (full_adder_357)                      0.00       5.17 f
+  adder3/FA28/cin (full_adder_356)                        0.00       5.17 f
+  adder3/FA28/U1/X (SAEDHVT14_INV_4)                      0.01       5.18 r
+  adder3/FA28/U2/X (SAEDHVT14_OAI22_0P5)                  0.05       5.23 f
+  adder3/FA28/carry (full_adder_356)                      0.00       5.23 f
+  adder3/FA29/cin (full_adder_355)                        0.00       5.23 f
+  adder3/FA29/U1/X (SAEDHVT14_INV_S_0P5)                  0.09       5.32 r
+  adder3/FA29/U5/X (SAEDHVT14_OAI22_0P5)                  0.08       5.40 f
+  adder3/FA29/carry (full_adder_355)                      0.00       5.40 f
+  adder3/FA30/cin (full_adder_354)                        0.00       5.40 f
+  adder3/FA30/U2/X (SAEDHVT14_INV_0P5)                    0.10       5.50 r
+  adder3/FA30/U1/X (SAEDHVT14_OAI22_2)                    0.05       5.55 f
+  adder3/FA30/carry (full_adder_354)                      0.00       5.55 f
+  adder3/FA31/cin (full_adder_353)                        0.00       5.55 f
+  adder3/FA31/U2/X (SAEDHVT14_INV_0P5)                    0.08       5.63 r
+  adder3/FA31/U1/X (SAEDHVT14_EO2_0P5)                    0.09       5.72 f
+  adder3/FA31/sum (full_adder_353)                        0.00       5.72 f
+  adder3/Sum[31] (ripple_carry_adder_32bit_12)            0.00       5.72 f
+  adder9/B[31] (ripple_carry_adder_32bit_6)               0.00       5.72 f
+  adder9/FA31/b (full_adder_161)                          0.00       5.72 f
+  adder9/FA31/U7/X (SAEDHVT14_INV_S_0P5)                  0.10       5.81 r
+  adder9/FA31/U5/X (SAEDHVT14_ND2_MM_0P5)                 0.05       5.86 f
+  adder9/FA31/U3/X (SAEDHVT14_ND2_MM_0P5)                 0.08       5.94 r
+  adder9/FA31/U1/X (SAEDHVT14_EO2_0P5)                    0.11       6.05 r
+  adder9/FA31/sum (full_adder_161)                        0.00       6.05 r
+  adder9/Sum[31] (ripple_carry_adder_32bit_6)             0.00       6.05 r
+  adder12/B[31] (ripple_carry_adder_32bit_3)              0.00       6.05 r
+  adder12/FA31/b (full_adder_65)                          0.00       6.05 r
+  adder12/FA31/U2/X (SAEDRVT14_EO2_3)                     0.05       6.10 r
+  adder12/FA31/U3/X (SAEDRVT14_EO2_3)                     0.03       6.13 f
+  adder12/FA31/sum (full_adder_65)                        0.00       6.13 f
+  adder12/Sum[31] (ripple_carry_adder_32bit_3)            0.00       6.13 f
+  adder14/A[31] (ripple_carry_adder_32bit_1)              0.00       6.13 f
+  adder14/FA31/a (full_adder_1)                           0.00       6.13 f
+  adder14/FA31/U1/X (SAEDHVT14_INV_ECO_3)                 0.02       6.15 r
+  adder14/FA31/U3/X (SAEDRVT14_EO2_3)                     0.04       6.19 f
+  adder14/FA31/U2/X (SAEDRVT14_EO2_2)                     0.03       6.22 r
+  adder14/FA31/sum (full_adder_1)                         0.00       6.22 r
+  adder14/Sum[31] (ripple_carry_adder_32bit_1)            0.00       6.22 r
+  y_out_reg_31_/D (SAEDHVT14_FDPRBQ_V2LP_1)               0.00       6.22 r
+  data arrival time                                                  6.22
+
+  clock clock (rise edge)                                 5.00       5.00
+  clock network delay (ideal)                             1.50       6.50
+  clock uncertainty                                      -0.30       6.20
+  y_out_reg_31_/CK (SAEDHVT14_FDPRBQ_V2LP_1)              0.00       6.20 r
+  library setup time                                      0.02       6.22
+  data required time                                                 6.22
+  --------------------------------------------------------------------------
+  data required time                                                 6.22
+  data arrival time                                                 -6.22
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.00
+
+
+  Startpoint: y_out_reg_0_
+              (rising edge-triggered flip-flop clocked by clock)
+  Endpoint: y_out[0] (output port clocked by clock)
+  Path Group: OUTPUTS
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fir_filter_16tap   8000                  saed14rvt_base_tt0p8v25c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clock (rise edge)                                 0.00       0.00
+  clock network delay (ideal)                             1.50       1.50
+  y_out_reg_0_/CK (SAEDHVT14_FDPRBQ_V2LP_1)               0.00       1.50 r
+  y_out_reg_0_/Q (SAEDHVT14_FDPRBQ_V2LP_1)                0.16       1.66 r
+  y_out[0] (out)                                          0.00       1.66 r
+  data arrival time                                                  1.66
+
+  clock clock (rise edge)                                 5.00       5.00
+  clock network delay (ideal)                             1.50       6.50
+  clock uncertainty                                      -0.30       6.20
+  output external delay                                  -1.00       5.20
+  data required time                                                 5.20
+  --------------------------------------------------------------------------
+  data required time                                                 5.20
+  data arrival time                                                 -1.66
+  --------------------------------------------------------------------------
+  slack (MET)                                                        3.54
+
+
+1

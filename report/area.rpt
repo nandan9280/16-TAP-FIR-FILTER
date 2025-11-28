@@ -1,0 +1,32 @@
+ 
+****************************************
+Report : area
+Design : fir_filter_16_tap
+Version: V-2023.12-SP4
+Date   : Wed Apr 16 18:07:05 2025
+****************************************
+
+Library(s) Used:
+
+    saed14hvt_base_tt0p8v25c (File: /home/synopsys/installs/LIBRARIES/SAED14nm_EDK_08_2024/SAED14nm_EDK_STD_HVT/liberty/nldm/base/saed14hvt_base_tt0p8v25c.db)
+    saed14lvt_base_tt0p8v25c (File: /home/synopsys/installs/LIBRARIES/SAED14nm_EDK_08_2024/SAED14nm_EDK_STD_LVT/liberty/nldm/base/saed14lvt_base_tt0p8v25c.db)
+    saed14rvt_base_tt0p8v25c (File: /home/synopsys/installs/LIBRARIES/SAED14nm_EDK_08_2024/SAED14nm_EDK_STD_RVT/liberty/nldm/base/saed14rvt_base_tt0p8v25c.db)
+
+Number of ports:                        24001
+Number of nets:                         56759
+Number of cells:                        27383
+Number of combinational cells:          26392
+Number of sequential cells:               288
+Number of macros/black boxes:               0
+Number of buf/inv:                       7810
+Number of references:                      35
+
+Combinational area:              13606.601679
+Buf/Inv area:                     1772.447996
+Noncombinational area:             306.892811
+Macro/Black Box area:                0.000000
+Net Interconnect area:           12044.577934
+
+Total cell area:                 13913.494490
+Total area:                      25958.072424
+1

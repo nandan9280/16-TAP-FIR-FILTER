@@ -1,0 +1,8 @@
+#@ # 
+#@ # Running icc2_shell Version V-2023.12-SP4 for linux64 -- Jun 03, 2024
+#@ # Date:   Thu Apr 17 16:35:32 2025
+#@ # Run by: 24mvd0059@synopsys.vit.ac.in
+#@ 
+
+open_lib lib
+exit

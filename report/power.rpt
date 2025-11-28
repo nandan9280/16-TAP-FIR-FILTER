@@ -1,0 +1,64 @@
+Information: Updating design information... (UID-85)
+Information: Propagating switching activity (low effort zero delay simulation). (PWR-6)
+Warning: Design has unannotated primary inputs. (PWR-414)
+Warning: Design has unannotated sequential cell outputs. (PWR-415)
+ 
+****************************************
+Report : power
+        -analysis_effort low
+Design : fir_filter_16_tap
+Version: V-2023.12-SP4
+Date   : Wed Apr 16 18:07:05 2025
+****************************************
+
+
+Library(s) Used:
+
+    saed14hvt_base_tt0p8v25c (File: /home/synopsys/installs/LIBRARIES/SAED14nm_EDK_08_2024/SAED14nm_EDK_STD_HVT/liberty/nldm/base/saed14hvt_base_tt0p8v25c.db)
+    saed14lvt_base_tt0p8v25c (File: /home/synopsys/installs/LIBRARIES/SAED14nm_EDK_08_2024/SAED14nm_EDK_STD_LVT/liberty/nldm/base/saed14lvt_base_tt0p8v25c.db)
+    saed14rvt_base_tt0p8v25c (File: /home/synopsys/installs/LIBRARIES/SAED14nm_EDK_08_2024/SAED14nm_EDK_STD_RVT/liberty/nldm/base/saed14rvt_base_tt0p8v25c.db)
+
+
+Operating Conditions: ss0p72v25c   Library: saed14rvt_base_ss0p72v25c
+Wire Load Model Mode: top
+
+Design        Wire Load Model            Library
+------------------------------------------------
+fir_filter_16_tap      8000              saed14rvt_base_tt0p8v25c
+
+
+Global Operating Voltage = 0.72 
+Power-specific unit information :
+    Voltage Units = 1V
+    Capacitance Units = 1.000000pf
+    Time Units = 1ns
+    Dynamic Power Units = 1mW    (derived from V,C,T units)
+    Leakage Power Units = 1pW
+
+
+Attributes
+----------
+i - Including register clock pin internal power
+
+
+  Cell Internal Power  = 733.1788 uW   (25%)
+  Net Switching Power  =   2.2433 mW   (75%)
+                         ---------
+Total Dynamic Power    =   2.9765 mW  (100%)
+
+Cell Leakage Power     =   3.5978 uW
+
+
+                 Internal         Switching           Leakage            Total
+Power Group      Power            Power               Power              Power   (   %    )  Attrs
+--------------------------------------------------------------------------------------------------
+io_pad             0.0000            0.0000            0.0000            0.0000  (   0.00%)
+memory             0.0000            0.0000            0.0000            0.0000  (   0.00%)
+black_box          0.0000            0.0000            0.0000            0.0000  (   0.00%)
+clock_network      0.1155            0.0000            0.0000            0.1155  (   3.88%)  i
+register       7.1743e-03        1.1706e-02        5.9049e+04        1.8940e-02  (   0.64%)
+sequential         0.0000            0.0000            0.0000            0.0000  (   0.00%)
+combinational      0.6105            2.2316        3.5368e+06            2.8456  (  95.49%)
+--------------------------------------------------------------------------------------------------
+Total              0.7332 mW         2.2433 mW     3.5958e+06 pW         2.9801 mW
+1

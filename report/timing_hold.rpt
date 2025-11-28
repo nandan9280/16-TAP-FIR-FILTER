@@ -1,0 +1,108 @@
+ 
+****************************************
+Report : timing
+        -path full
+        -delay min
+        -max_paths 1
+Design : fir_filter_16_tap
+Version: V-2023.12-SP4
+Date   : Wed Apr 16 18:07:06 2025
+****************************************
+
+Operating Conditions: ff0p88v25c   Library: saed14rvt_base_ff0p88v25c
+Wire Load Model Mode: top
+
+  Startpoint: x_in[0] (input port clocked by clock)
+  Endpoint: tap0_reg_0_
+            (rising edge-triggered flip-flop clocked by clock)
+  Path Group: INPUTS
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fir_filter_16_tap  8000                  saed14rvt_base_tt0p8v25c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clock (rise edge)                                 0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  input external delay                                    1.00       1.00 f
+  x_in[0] (in)                                            0.00       1.00 f
+  tap0_reg_0_/D (SAEDHVT14_FDPRBQ_V2LP_1)                 0.00       1.00 f
+  data arrival time                                                  1.00
+
+  clock clock (rise edge)                                 0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  tap0_reg_0_/CK (SAEDHVT14_FDPRBQ_V2LP_1)                0.00       0.00 r
+  library hold time                                       0.01       0.01
+  data required time                                                 0.01
+  --------------------------------------------------------------------------
+  data required time                                                 0.01
+  data arrival time                                                 -1.00
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.99
+
+
+  Startpoint: y_out_reg_0_
+              (rising edge-triggered flip-flop clocked by clock)
+  Endpoint: y_out[0] (output port clocked by clock)
+  Path Group: OUTPUTS
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fir_filter_16_tap  8000                  saed14rvt_base_tt0p8v25c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clock (rise edge)                                 0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  y_out_reg_0_/CK (SAEDHVT14_FDPRBQ_V2LP_1)               0.00       0.00 r
+  y_out_reg_0_/Q (SAEDHVT14_FDPRBQ_V2LP_1)                0.05       0.05 f
+  y_out[0] (out)                                          0.00       0.05 f
+  data arrival time                                                  0.05
+
+  clock clock (rise edge)                                 0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  output external delay                                  -1.00      -1.00
+  data required time                                                -1.00
+  --------------------------------------------------------------------------
+  data required time                                                -1.00
+  data arrival time                                                 -0.05
+  --------------------------------------------------------------------------
+  slack (MET)                                                        1.05
+
+
+  Startpoint: tap1_reg_6_
+              (rising edge-triggered flip-flop clocked by clock)
+  Endpoint: tap2_reg_6_
+            (rising edge-triggered flip-flop clocked by clock)
+  Path Group: clock
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fir_filter_16_tap  8000                  saed14rvt_base_tt0p8v25c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clock (rise edge)                                 0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  tap1_reg_6_/CK (SAEDHVT14_FDPRBQ_V2LP_1)                0.00       0.00 r
+  tap1_reg_6_/Q (SAEDHVT14_FDPRBQ_V2LP_1)                 0.06       0.06 f
+  tap2_reg_6_/D (SAEDHVT14_FDPRBQ_V2LP_1)                 0.00       0.06 f
+  data arrival time                                                  0.06
+
+  clock clock (rise edge)                                 0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  tap2_reg_6_/CK (SAEDHVT14_FDPRBQ_V2LP_1)                0.00       0.00 r
+  library hold time                                      -0.01      -0.01
+  data required time                                                -0.01
+  --------------------------------------------------------------------------
+  data required time                                                -0.01
+  data arrival time                                                 -0.06
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.07
+
+
+1
