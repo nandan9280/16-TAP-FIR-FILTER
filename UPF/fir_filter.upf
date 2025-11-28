@@ -1,0 +1,65 @@
+upf_version 2.1
+
+# Set top module
+set_design_top fir_filter_16_tap
+
+#========================================
+# 1. Supply Ports and Nets
+#========================================
+create_supply_port VDD_CORE
+create_supply_net VDD_CORE
+connect_supply_net VDD_CORE -ports VDD_CORE
+
+create_supply_port VDD_MUL
+create_supply_net VDD_MUL
+connect_supply_net VDD_MUL -ports VDD_MUL
+
+create_supply_port VSS
+create_supply_net VSS
+connect_supply_net VSS -ports VSS
+
+#========================================
+# 2. Supply Sets
+#========================================
+create_supply_set SSet_VDD_CORE_VSS -function {power VDD_CORE} -function {ground VSS}
+create_supply_set SSet_VDD_MUL_VSS  -function {power VDD_MUL}  -function {ground VSS}
+
+#========================================
+# 3. Power Domains
+#========================================
+create_power_domain PD_CORE -include_scope -supply {primary SSet_VDD_CORE_VSS}
+create_power_domain PD_MUL  -elements {m0 m1 m2 m3 m4 m5 m6 m7 m8 m9 m10 m11 m12 m13 m14 m15} -supply {primary SSet_VDD_MUL_VSS}
+
+#========================================
+# 4. Port Attributes
+#========================================
+set_port_attributes -ports {clk rst enable_mul x_in h0 h1 h2 h3 h4 h5 h6 h7 h8 h9 h10 h11 h12 h13 h14 h15} -driver_supply PD_CORE.primary
+set_port_attributes -ports {y_out} -receiver_supply PD_CORE.primary
+
+#========================================
+# 5. Power States
+#========================================
+add_power_state SSet_VDD_CORE_VSS -state {ON -supply_expr {power == {FULL_ON 0.85} && ground == {FULL_ON 0}}}
+add_power_state SSet_VDD_MUL_VSS  -state {ON -supply_expr {power == {FULL_ON 0.7} && ground == {FULL_ON 0}}}
+
+add_power_state PD_CORE -state {ON_state -logic_expr {SSet_VDD_CORE_VSS == ON && SSet_VDD_MUL_VSS == ON}}
+
+#========================================
+# 6. Level Shifter Strategy
+#========================================
+set_level_shifter LS_MUL_TO_CORE -domain {PD_MUL} -rule {high_to_low} -location {self} -source SSet_VDD_CORE_VSS -sink SSet_VDD_MUL_VSS \
+    -input_supply SSet_VDD_CORE_VSS -output_supply SSet_VDD_MUL_VSS
+
+map_level_shifter_cell LS_MUL_TO_CORE -domain {PD_MUL} -lib_cells {SAEDRVT14_AOLVLUBUFE0_IY2V1_1}
+
+
+
+set_isolation ISO_MUL_TO_CORE -domain PD_MUL -clamp_value 0 -isolation_supply {SSet_VDD_MUL_VSS} -isolation_signal {iso_enable} -applies_to outputs
+
+create_power_switch PSW_MUL -domain PD_MUL -input_supply_port {VDD_CORE VDD_CORE} -output_supply_port {VDD_MUL VDD_MUL} -control_port {mul_switch_ctrl mul_switch_ctrl} -on_state {SWITCH_ON2 VDD_CORE {mul_switch_ctrl == 1'b1}} -supply_set SSet_VDD_MUL_VSS
+
+
+
+#========================================
+# End of Final UPF File
+#========================================

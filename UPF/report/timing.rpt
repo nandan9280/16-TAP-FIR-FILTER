@@ -1,0 +1,348 @@
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : fir_filter_16_tap
+Version: V-2023.12-SP4
+Date   : Fri Nov 28 23:22:02 2025
+****************************************
+
+ # A fanout number of 1000 was used for high fanout net computations.
+Wire Load Model Mode: top
+
+  Startpoint: enable_mul (input port clocked by clock)
+  Endpoint: y_out_reg[31]
+            (rising edge-triggered flip-flop clocked by clock)
+  Path Group: INPUTS
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fir_filter_16_tap  8000                  saed14rvt_base_tt0p8v25c
+
+  Point                                                   Incr       Path      Voltage
+  ------------------------------------------------------------------------------------
+  clock clock (rise edge)                                 0.00       0.00      
+  clock network delay (ideal)                             0.00       0.00      
+  input external delay                                    1.00       1.00 f    
+  enable_mul (in)                                         0.00       1.00 f    
+  m0/enable (booth_multiplier_16x16)                      0.00       1.00 f    
+  m0/I_0/Z (GTECH_NOT)                                    0.00       1.00 r    0.72
+  m0/B_48/Z (GTECH_BUF)                                   0.00       1.00 r    0.72
+  m0/C1156/Z_0 (*SELECT_OP_2.32_2.1_32)                   0.00       1.00 r    0.72
+  m0/P[0] (booth_multiplier_16x16)                        0.00       1.00 r    
+  add_81/A_0 (*ADD_UNS_OP_32_32_32)                       0.00       1.00 r    
+  add_81/*cell*1361/A[0] (DW01_add_width32)               0.00       1.00 r    
+  ...
+  add_81/*cell*1361/SUM[31] (DW01_add_width32)            0.00       1.01 r    
+  add_81/Z_31 (*ADD_UNS_OP_32_32_32)                      0.00       1.01 r    
+  add_82/A_31 (*ADD_UNS_OP_32_32_32)                      0.00       1.01 r    
+  add_82/*cell*1364/A[31] (DW01_add_width32)              0.00       1.01 r    
+  ...
+  add_82/*cell*1364/SUM[31] (DW01_add_width32)            0.00       1.01 r    
+  add_82/Z_31 (*ADD_UNS_OP_32_32_32)                      0.00       1.01 r    
+  add_83/A_31 (*ADD_UNS_OP_32_32_32)                      0.00       1.01 r    
+  add_83/*cell*1367/A[31] (DW01_add_width32)              0.00       1.01 r    
+  ...
+  add_83/*cell*1367/SUM[31] (DW01_add_width32)            0.00       1.01 r    
+  add_83/Z_31 (*ADD_UNS_OP_32_32_32)                      0.00       1.01 r    
+  add_84/A_31 (*ADD_UNS_OP_32_32_32)                      0.00       1.01 r    
+  add_84/*cell*1370/A[31] (DW01_add_width32)              0.00       1.01 r    
+  ...
+  add_84/*cell*1370/SUM[31] (DW01_add_width32)            0.00       1.01 r    
+  add_84/Z_31 (*ADD_UNS_OP_32_32_32)                      0.00       1.01 r    
+  add_85/A_31 (*ADD_UNS_OP_32_32_32)                      0.00       1.01 r    
+  add_85/*cell*1373/A[31] (DW01_add_width32)              0.00       1.01 r    
+  ...
+  add_85/*cell*1373/SUM[31] (DW01_add_width32)            0.00       1.01 r    
+  add_85/Z_31 (*ADD_UNS_OP_32_32_32)                      0.00       1.01 r    
+  add_86/A_31 (*ADD_UNS_OP_32_32_32)                      0.00       1.01 r    
+  add_86/*cell*1376/A[31] (DW01_add_width32)              0.00       1.01 r    
+  ...
+  add_86/*cell*1376/SUM[31] (DW01_add_width32)            0.00       1.01 r    
+  add_86/Z_31 (*ADD_UNS_OP_32_32_32)                      0.00       1.01 r    
+  add_87/A_31 (*ADD_UNS_OP_32_32_32)                      0.00       1.01 r    
+  add_87/*cell*1379/A[31] (DW01_add_width32)              0.00       1.01 r    
+  ...
+  add_87/*cell*1379/SUM[31] (DW01_add_width32)            0.00       1.01 r    
+  add_87/Z_31 (*ADD_UNS_OP_32_32_32)                      0.00       1.01 r    
+  add_88/A_31 (*ADD_UNS_OP_32_32_32)                      0.00       1.01 r    
+  add_88/*cell*1382/A[31] (DW01_add_width32)              0.00       1.01 r    
+  ...
+  add_88/*cell*1382/SUM[31] (DW01_add_width32)            0.00       1.01 r    
+  add_88/Z_31 (*ADD_UNS_OP_32_32_32)                      0.00       1.01 r    
+  add_89/A_31 (*ADD_UNS_OP_32_32_32)                      0.00       1.01 r    
+  add_89/*cell*1385/A[31] (DW01_add_width32)              0.00       1.01 r    
+  ...
+  add_89/*cell*1385/SUM[31] (DW01_add_width32)            0.00       1.01 r    
+  add_89/Z_31 (*ADD_UNS_OP_32_32_32)                      0.00       1.01 r    
+  add_90/A_31 (*ADD_UNS_OP_32_32_32)                      0.00       1.01 r    
+  add_90/*cell*1388/A[31] (DW01_add_width32)              0.00       1.01 r    
+  ...
+  add_90/*cell*1388/SUM[31] (DW01_add_width32)            0.00       1.01 r    
+  add_90/Z_31 (*ADD_UNS_OP_32_32_32)                      0.00       1.01 r    
+  add_91/A_31 (*ADD_UNS_OP_32_32_32)                      0.00       1.01 r    
+  add_91/*cell*1391/A[31] (DW01_add_width32)              0.00       1.01 r    
+  ...
+  add_91/*cell*1391/SUM[31] (DW01_add_width32)            0.00       1.01 r    
+  add_91/Z_31 (*ADD_UNS_OP_32_32_32)                      0.00       1.01 r    
+  add_92/A_31 (*ADD_UNS_OP_32_32_32)                      0.00       1.01 r    
+  add_92/*cell*1394/A[31] (DW01_add_width32)              0.00       1.01 r    
+  ...
+  add_92/*cell*1394/SUM[31] (DW01_add_width32)            0.00       1.01 r    
+  add_92/Z_31 (*ADD_UNS_OP_32_32_32)                      0.00       1.01 r    
+  add_93/A_31 (*ADD_UNS_OP_32_32_32)                      0.00       1.01 r    
+  add_93/*cell*1397/A[31] (DW01_add_width32)              0.00       1.01 r    
+  ...
+  add_93/*cell*1397/SUM[31] (DW01_add_width32)            0.00       1.01 r    
+  add_93/Z_31 (*ADD_UNS_OP_32_32_32)                      0.00       1.01 r    
+  add_94/A_31 (*ADD_UNS_OP_32_32_32)                      0.00       1.01 r    
+  add_94/*cell*1400/A[31] (DW01_add_width32)              0.00       1.01 r    
+  ...
+  add_94/*cell*1400/SUM[31] (DW01_add_width32)            0.00       1.01 r    
+  add_94/Z_31 (*ADD_UNS_OP_32_32_32)                      0.00       1.01 r    
+  add_100/A_31 (*ADD_UNS_OP_32_32_32)                     0.00       1.01 r    
+  add_100/*cell*1403/A[31] (DW01_add_width32)             0.00       1.01 r    
+  ...
+  add_100/*cell*1403/SUM[31] (DW01_add_width32)           0.00       1.01 r    
+  add_100/Z_31 (*ADD_UNS_OP_32_32_32)                     0.00       1.01 r    
+  y_out_reg[31]/next_state (**SEQGEN**)                   0.00       1.01 r    0.72
+  data arrival time                                                  1.01      
+
+  clock clock (rise edge)                                 5.00       5.00      
+  clock network delay (ideal)                             0.00       5.00      
+  y_out_reg[31]/clocked_on (**SEQGEN**)                   0.00       5.00 r    
+  library setup time                                      0.00       5.00      
+  data required time                                                 5.00      
+  ------------------------------------------------------------------------------------
+  data required time                                                 5.00      
+  data arrival time                                                 -1.01      
+  ------------------------------------------------------------------------------------
+  slack (MET)                                                        3.99      
+
+
+  Startpoint: y_out_reg[0]
+              (rising edge-triggered flip-flop clocked by clock)
+  Endpoint: y_out[0] (output port clocked by clock)
+  Path Group: OUTPUTS
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fir_filter_16_tap  8000                  saed14rvt_base_tt0p8v25c
+
+  Point                                                   Incr       Path      Voltage
+  ------------------------------------------------------------------------------------
+  clock clock (rise edge)                                 0.00       0.00      
+  clock network delay (ideal)                             0.00       0.00      
+  y_out_reg[0]/clocked_on (**SEQGEN**)                    0.00       0.00 r    0.72
+  y_out_reg[0]/Q (**SEQGEN**)                             0.00       0.00 r    0.72
+  y_out[0] (out)                                          0.00       0.00 r    
+  data arrival time                                                  0.00      
+
+  clock clock (rise edge)                                 5.00       5.00      
+  clock network delay (ideal)                             0.00       5.00      
+  output external delay                                  -1.00       4.00      
+  data required time                                                 4.00      
+  ------------------------------------------------------------------------------------
+  data required time                                                 4.00      
+  data arrival time                                                  0.00      
+  ------------------------------------------------------------------------------------
+  slack (MET)                                                        4.00      
+
+
+  Startpoint: tap0_reg[0]
+              (rising edge-triggered flip-flop clocked by clock)
+  Endpoint: y_out_reg[31]
+            (rising edge-triggered flip-flop clocked by clock)
+  Path Group: clock
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fir_filter_16_tap  8000                  saed14rvt_base_tt0p8v25c
+
+  Point                                                   Incr       Path      Voltage
+  ------------------------------------------------------------------------------------
+  clock clock (rise edge)                                 0.00       0.00      
+  clock network delay (ideal)                             0.00       0.00      
+  tap0_reg[0]/clocked_on (**SEQGEN**)                     0.00       0.00 r    0.72
+  tap0_reg[0]/Q (**SEQGEN**)                              0.00       0.00 r    0.72
+  m0/A[0] (booth_multiplier_16x16)                        0.00       0.00 r    
+  m0/I_62/Z (GTECH_NOT)                                   0.00       0.00 f    0.72
+  m0/add_24/A_0 (*ADD_UNS_OP_32_1_32)                     0.00       0.00 f    
+  m0/add_24/*cell*1407/A[0] (DW01_inc_width32)            0.00       0.00 f    
+  ...
+  m0/add_24/*cell*1407/SUM[0] (DW01_inc_width32)          0.00       0.00 r    
+  m0/add_24/Z_0 (*ADD_UNS_OP_32_1_32)                     0.00       0.00 r    
+  m0/C1140/Z_0 (*SELECT_OP_2.32_2.1_32)                   0.00       0.00 r    0.72
+  m0/add_27_I2/A_0 (*ADD_UNS_OP_32_32_32)                 0.00       0.00 r    
+  m0/add_27_I2/*cell*1411/A[0] (DW01_add_width32)         0.00       0.00 r    
+  ...
+  m0/add_27_I2/*cell*1411/SUM[31] (DW01_add_width32)      0.00       0.00 r    
+  m0/add_27_I2/Z_31 (*ADD_UNS_OP_32_32_32)                0.00       0.00 r    
+  m0/add_27_I3/A_31 (*ADD_UNS_OP_32_32_32)                0.00       0.00 r    
+  m0/add_27_I3/*cell*1416/A[31] (DW01_add_width32)        0.00       0.00 r    
+  ...
+  m0/add_27_I3/*cell*1416/SUM[31] (DW01_add_width32)      0.00       0.00 r    
+  m0/add_27_I3/Z_31 (*ADD_UNS_OP_32_32_32)                0.00       0.00 r    
+  m0/add_27_I4/A_31 (*ADD_UNS_OP_32_32_32)                0.00       0.00 r    
+  m0/add_27_I4/*cell*1421/A[31] (DW01_add_width32)        0.00       0.00 r    
+  ...
+  m0/add_27_I4/*cell*1421/SUM[31] (DW01_add_width32)      0.00       0.00 r    
+  m0/add_27_I4/Z_31 (*ADD_UNS_OP_32_32_32)                0.00       0.00 r    
+  m0/add_27_I5/A_31 (*ADD_UNS_OP_32_32_32)                0.00       0.00 r    
+  m0/add_27_I5/*cell*1426/A[31] (DW01_add_width32)        0.00       0.00 r    
+  ...
+  m0/add_27_I5/*cell*1426/SUM[31] (DW01_add_width32)      0.00       0.00 r    
+  m0/add_27_I5/Z_31 (*ADD_UNS_OP_32_32_32)                0.00       0.00 r    
+  m0/add_27_I6/A_31 (*ADD_UNS_OP_32_32_32)                0.00       0.00 r    
+  m0/add_27_I6/*cell*1431/A[31] (DW01_add_width32)        0.00       0.00 r    
+  ...
+  m0/add_27_I6/*cell*1431/SUM[31] (DW01_add_width32)      0.00       0.01 r    
+  m0/add_27_I6/Z_31 (*ADD_UNS_OP_32_32_32)                0.00       0.01 r    
+  m0/add_27_I7/A_31 (*ADD_UNS_OP_32_32_32)                0.00       0.01 r    
+  m0/add_27_I7/*cell*1436/A[31] (DW01_add_width32)        0.00       0.01 r    
+  ...
+  m0/add_27_I7/*cell*1436/SUM[31] (DW01_add_width32)      0.00       0.01 r    
+  m0/add_27_I7/Z_31 (*ADD_UNS_OP_32_32_32)                0.00       0.01 r    
+  m0/add_27_I8/A_31 (*ADD_UNS_OP_32_32_32)                0.00       0.01 r    
+  m0/add_27_I8/*cell*1441/A[31] (DW01_add_width32)        0.00       0.01 r    
+  ...
+  m0/add_27_I8/*cell*1441/SUM[31] (DW01_add_width32)      0.00       0.01 r    
+  m0/add_27_I8/Z_31 (*ADD_UNS_OP_32_32_32)                0.00       0.01 r    
+  m0/add_27_I9/A_31 (*ADD_UNS_OP_32_32_32)                0.00       0.01 r    
+  m0/add_27_I9/*cell*1446/A[31] (DW01_add_width32)        0.00       0.01 r    
+  ...
+  m0/add_27_I9/*cell*1446/SUM[31] (DW01_add_width32)      0.00       0.01 r    
+  m0/add_27_I9/Z_31 (*ADD_UNS_OP_32_32_32)                0.00       0.01 r    
+  m0/add_27_I10/A_31 (*ADD_UNS_OP_32_32_32)               0.00       0.01 r    
+  m0/add_27_I10/*cell*1451/A[31] (DW01_add_width32)       0.00       0.01 r    
+  ...
+  m0/add_27_I10/*cell*1451/SUM[31] (DW01_add_width32)     0.00       0.01 r    
+  m0/add_27_I10/Z_31 (*ADD_UNS_OP_32_32_32)               0.00       0.01 r    
+  m0/add_27_I11/A_31 (*ADD_UNS_OP_32_32_32)               0.00       0.01 r    
+  m0/add_27_I11/*cell*1456/A[31] (DW01_add_width32)       0.00       0.01 r    
+  ...
+  m0/add_27_I11/*cell*1456/SUM[31] (DW01_add_width32)     0.00       0.01 r    
+  m0/add_27_I11/Z_31 (*ADD_UNS_OP_32_32_32)               0.00       0.01 r    
+  m0/add_27_I12/A_31 (*ADD_UNS_OP_32_32_32)               0.00       0.01 r    
+  m0/add_27_I12/*cell*1461/A[31] (DW01_add_width32)       0.00       0.01 r    
+  ...
+  m0/add_27_I12/*cell*1461/SUM[31] (DW01_add_width32)     0.00       0.01 r    
+  m0/add_27_I12/Z_31 (*ADD_UNS_OP_32_32_32)               0.00       0.01 r    
+  m0/add_27_I13/A_31 (*ADD_UNS_OP_32_32_32)               0.00       0.01 r    
+  m0/add_27_I13/*cell*1466/A[31] (DW01_add_width32)       0.00       0.01 r    
+  ...
+  m0/add_27_I13/*cell*1466/SUM[31] (DW01_add_width32)     0.00       0.01 r    
+  m0/add_27_I13/Z_31 (*ADD_UNS_OP_32_32_32)               0.00       0.01 r    
+  m0/add_27_I14/A_31 (*ADD_UNS_OP_32_32_32)               0.00       0.01 r    
+  m0/add_27_I14/*cell*1471/A[31] (DW01_add_width32)       0.00       0.01 r    
+  ...
+  m0/add_27_I14/*cell*1471/SUM[31] (DW01_add_width32)     0.00       0.01 r    
+  m0/add_27_I14/Z_31 (*ADD_UNS_OP_32_32_32)               0.00       0.01 r    
+  m0/add_27_I15/A_31 (*ADD_UNS_OP_32_32_32)               0.00       0.01 r    
+  m0/add_27_I15/*cell*1476/A[31] (DW01_add_width32)       0.00       0.01 r    
+  ...
+  m0/add_27_I15/*cell*1476/SUM[31] (DW01_add_width32)     0.00       0.01 r    
+  m0/add_27_I15/Z_31 (*ADD_UNS_OP_32_32_32)               0.00       0.01 r    
+  m0/add_27_I16/A_31 (*ADD_UNS_OP_32_32_32)               0.00       0.01 r    
+  m0/add_27_I16/*cell*1481/A[31] (DW01_add_width32)       0.00       0.01 r    
+  ...
+  m0/add_27_I16/*cell*1481/SUM[31] (DW01_add_width32)     0.00       0.01 r    
+  m0/add_27_I16/Z_31 (*ADD_UNS_OP_32_32_32)               0.00       0.01 r    
+  m0/C1156/Z_31 (*SELECT_OP_2.32_2.1_32)                  0.00       0.01 r    0.72
+  m0/P[31] (booth_multiplier_16x16)                       0.00       0.01 r    
+  add_81/A_31 (*ADD_UNS_OP_32_32_32)                      0.00       0.01 r    
+  add_81/*cell*1361/A[31] (DW01_add_width32)              0.00       0.01 r    
+  ...
+  add_81/*cell*1361/SUM[31] (DW01_add_width32)            0.00       0.01 r    
+  add_81/Z_31 (*ADD_UNS_OP_32_32_32)                      0.00       0.01 r    
+  add_82/A_31 (*ADD_UNS_OP_32_32_32)                      0.00       0.01 r    
+  add_82/*cell*1364/A[31] (DW01_add_width32)              0.00       0.01 r    
+  ...
+  add_82/*cell*1364/SUM[31] (DW01_add_width32)            0.00       0.01 r    
+  add_82/Z_31 (*ADD_UNS_OP_32_32_32)                      0.00       0.01 r    
+  add_83/A_31 (*ADD_UNS_OP_32_32_32)                      0.00       0.01 r    
+  add_83/*cell*1367/A[31] (DW01_add_width32)              0.00       0.01 r    
+  ...
+  add_83/*cell*1367/SUM[31] (DW01_add_width32)            0.00       0.01 r    
+  add_83/Z_31 (*ADD_UNS_OP_32_32_32)                      0.00       0.01 r    
+  add_84/A_31 (*ADD_UNS_OP_32_32_32)                      0.00       0.01 r    
+  add_84/*cell*1370/A[31] (DW01_add_width32)              0.00       0.01 r    
+  ...
+  add_84/*cell*1370/SUM[31] (DW01_add_width32)            0.00       0.01 r    
+  add_84/Z_31 (*ADD_UNS_OP_32_32_32)                      0.00       0.01 r    
+  add_85/A_31 (*ADD_UNS_OP_32_32_32)                      0.00       0.01 r    
+  add_85/*cell*1373/A[31] (DW01_add_width32)              0.00       0.01 r    
+  ...
+  add_85/*cell*1373/SUM[31] (DW01_add_width32)            0.00       0.01 r    
+  add_85/Z_31 (*ADD_UNS_OP_32_32_32)                      0.00       0.01 r    
+  add_86/A_31 (*ADD_UNS_OP_32_32_32)                      0.00       0.01 r    
+  add_86/*cell*1376/A[31] (DW01_add_width32)              0.00       0.01 r    
+  ...
+  add_86/*cell*1376/SUM[31] (DW01_add_width32)            0.00       0.01 r    
+  add_86/Z_31 (*ADD_UNS_OP_32_32_32)                      0.00       0.01 r    
+  add_87/A_31 (*ADD_UNS_OP_32_32_32)                      0.00       0.01 r    
+  add_87/*cell*1379/A[31] (DW01_add_width32)              0.00       0.01 r    
+  ...
+  add_87/*cell*1379/SUM[31] (DW01_add_width32)            0.00       0.01 r    
+  add_87/Z_31 (*ADD_UNS_OP_32_32_32)                      0.00       0.01 r    
+  add_88/A_31 (*ADD_UNS_OP_32_32_32)                      0.00       0.01 r    
+  add_88/*cell*1382/A[31] (DW01_add_width32)              0.00       0.01 r    
+  ...
+  add_88/*cell*1382/SUM[31] (DW01_add_width32)            0.00       0.01 r    
+  add_88/Z_31 (*ADD_UNS_OP_32_32_32)                      0.00       0.01 r    
+  add_89/A_31 (*ADD_UNS_OP_32_32_32)                      0.00       0.01 r    
+  add_89/*cell*1385/A[31] (DW01_add_width32)              0.00       0.01 r    
+  ...
+  add_89/*cell*1385/SUM[31] (DW01_add_width32)            0.00       0.01 r    
+  add_89/Z_31 (*ADD_UNS_OP_32_32_32)                      0.00       0.01 r    
+  add_90/A_31 (*ADD_UNS_OP_32_32_32)                      0.00       0.01 r    
+  add_90/*cell*1388/A[31] (DW01_add_width32)              0.00       0.01 r    
+  ...
+  add_90/*cell*1388/SUM[31] (DW01_add_width32)            0.00       0.01 r    
+  add_90/Z_31 (*ADD_UNS_OP_32_32_32)                      0.00       0.01 r    
+  add_91/A_31 (*ADD_UNS_OP_32_32_32)                      0.00       0.01 r    
+  add_91/*cell*1391/A[31] (DW01_add_width32)              0.00       0.01 r    
+  ...
+  add_91/*cell*1391/SUM[31] (DW01_add_width32)            0.00       0.01 r    
+  add_91/Z_31 (*ADD_UNS_OP_32_32_32)                      0.00       0.01 r    
+  add_92/A_31 (*ADD_UNS_OP_32_32_32)                      0.00       0.01 r    
+  add_92/*cell*1394/A[31] (DW01_add_width32)              0.00       0.01 r    
+  ...
+  add_92/*cell*1394/SUM[31] (DW01_add_width32)            0.00       0.01 r    
+  add_92/Z_31 (*ADD_UNS_OP_32_32_32)                      0.00       0.01 r    
+  add_93/A_31 (*ADD_UNS_OP_32_32_32)                      0.00       0.01 r    
+  add_93/*cell*1397/A[31] (DW01_add_width32)              0.00       0.01 r    
+  ...
+  add_93/*cell*1397/SUM[31] (DW01_add_width32)            0.00       0.01 r    
+  add_93/Z_31 (*ADD_UNS_OP_32_32_32)                      0.00       0.01 r    
+  add_94/A_31 (*ADD_UNS_OP_32_32_32)                      0.00       0.01 r    
+  add_94/*cell*1400/A[31] (DW01_add_width32)              0.00       0.01 r    
+  ...
+  add_94/*cell*1400/SUM[31] (DW01_add_width32)            0.00       0.01 r    
+  add_94/Z_31 (*ADD_UNS_OP_32_32_32)                      0.00       0.01 r    
+  add_100/A_31 (*ADD_UNS_OP_32_32_32)                     0.00       0.01 r    
+  add_100/*cell*1403/A[31] (DW01_add_width32)             0.00       0.01 r    
+  ...
+  add_100/*cell*1403/SUM[31] (DW01_add_width32)           0.00       0.01 r    
+  add_100/Z_31 (*ADD_UNS_OP_32_32_32)                     0.00       0.01 r    
+  y_out_reg[31]/next_state (**SEQGEN**)                   0.00       0.01 r    0.72
+  data arrival time                                                  0.01      
+
+  clock clock (rise edge)                                 5.00       5.00      
+  clock network delay (ideal)                             0.00       5.00      
+  y_out_reg[31]/clocked_on (**SEQGEN**)                   0.00       5.00 r    
+  library setup time                                      0.00       5.00      
+  data required time                                                 5.00      
+  ------------------------------------------------------------------------------------
+  data required time                                                 5.00      
+  data arrival time                                                 -0.01      
+  ------------------------------------------------------------------------------------
+  slack (MET)                                                        4.99      
+
+
+1

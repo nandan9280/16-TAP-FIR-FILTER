@@ -1,0 +1,52 @@
+ 
+****************************************
+Report : power
+        -analysis_effort low
+Design : fir_filter_16_tap
+Version: V-2023.12-SP4
+Date   : Wed Apr 16 14:37:13 2025
+****************************************
+
+
+Library(s) Used:
+
+    saed14hvt_base_ss0p72v25c (File: /home/synopsys/installs/LIBRARIES/SAED14nm_EDK_08_2024/SAED14nm_EDK_STD_HVT/liberty/nldm/base/saed14hvt_base_ss0p72v25c.db)
+    saed14lvt_base_ss0p72v25c (File: /home/synopsys/installs/LIBRARIES/SAED14nm_EDK_08_2024/SAED14nm_EDK_STD_LVT/liberty/nldm/base/saed14lvt_base_ss0p72v25c.db)
+    saed14rvt_base_ss0p72v25c (File: /home/synopsys/installs/LIBRARIES/SAED14nm_EDK_08_2024/SAED14nm_EDK_STD_RVT/liberty/nldm/base/saed14rvt_base_ss0p72v25c.db)
+
+
+Global Operating Voltage = 0.72 
+Power-specific unit information :
+    Voltage Units = 1V
+    Capacitance Units = 1.000000pf
+    Time Units = 1ns
+    Dynamic Power Units = 1mW    (derived from V,C,T units)
+    Leakage Power Units = 1pW
+
+
+Attributes
+----------
+i - Including register clock pin internal power
+
+
+  Cell Internal Power  = 498.8006 uW   (20%)
+  Net Switching Power  =   2.0122 mW   (80%)
+                         ---------
+Total Dynamic Power    =   2.5110 mW  (100%)
+
+Cell Leakage Power     = 397.0333 nW
+
+
+                 Internal         Switching           Leakage            Total
+Power Group      Power            Power               Power              Power   (   %    )  Attrs
+--------------------------------------------------------------------------------------------------
+io_pad             0.0000            0.0000            0.0000            0.0000  (   0.00%)
+memory             0.0000            0.0000            0.0000            0.0000  (   0.00%)
+black_box          0.0000            0.0000            0.0000            0.0000  (   0.00%)
+clock_network  8.7386e-02            0.0000            0.0000        8.7386e-02  (   3.48%)  i
+register       4.5192e-03        1.1434e-02        7.8100e+03        1.5961e-02  (   0.64%)
+sequential         0.0000            0.0000            0.0000            0.0000  (   0.00%)
+combinational      0.4069            2.0008        3.8856e+05            2.4080  (  95.88%)
+--------------------------------------------------------------------------------------------------
+Total              0.4988 mW         2.0122 mW     3.9637e+05 pW         2.5114 mW
+1

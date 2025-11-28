@@ -1,0 +1,55 @@
+Information: Updating design information... (UID-85)
+Warning: Design 'fir_filter_16_tap' contains 1 high-fanout nets. A fanout number of 1000 will be used for delay calculations involving these nets. (TIM-134)
+Information: Propagating switching activity (low effort zero delay simulation). (PWR-6)
+Warning: Design has unannotated primary inputs. (PWR-414)
+Warning: Design has unannotated sequential cell outputs. (PWR-415)
+ 
+****************************************
+Report : power
+        -analysis_effort low
+Design : fir_filter_16_tap
+Version: V-2023.12-SP4
+Date   : Fri Nov 28 23:22:00 2025
+****************************************
+
+
+Library(s) Used:
+
+    gtech (File: /home/synopsys/installs/syn/V-2023.12-SP4/libraries/syn/gtech.db)
+
+
+Global Operating Voltage = 0.8  
+Power-specific unit information :
+    Voltage Units = 1V
+    Capacitance Units = 1.000000pf
+    Time Units = 1ns
+    Dynamic Power Units = 1mW    (derived from V,C,T units)
+    Leakage Power Units = 1pW
+
+
+Attributes
+----------
+i - Including register clock pin internal power
+
+
+  Cell Internal Power  =   0.0000 mW    (0%)
+  Net Switching Power  = 845.4632 uW  (100%)
+                         ---------
+Total Dynamic Power    = 845.4632 uW  (100%)
+
+Cell Leakage Power     =   0.0000 pW
+
+
+                 Internal         Switching           Leakage            Total
+Power Group      Power            Power               Power              Power   (   %    )  Attrs
+--------------------------------------------------------------------------------------------------
+io_pad             0.0000            0.0000            0.0000            0.0000  (   0.00%)
+memory             0.0000            0.0000            0.0000            0.0000  (   0.00%)
+black_box          0.0000            0.0000            0.0000            0.0000  (   0.00%)
+clock_network      0.0000            0.0000            0.0000            0.0000  (   0.00%)  i
+register           0.0000            0.1300            0.0000            0.1300  (  15.38%)
+sequential         0.0000            0.0000            0.0000            0.0000  (   0.00%)
+combinational      0.0000            0.7154            0.0000            0.7154  (  84.62%)
+--------------------------------------------------------------------------------------------------
+Total              0.0000 mW         0.8455 mW         0.0000 pW         0.8455 mW
+1

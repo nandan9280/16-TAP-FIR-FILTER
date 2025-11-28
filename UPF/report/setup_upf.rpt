@@ -1,0 +1,316 @@
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : fir_filter_16_tap
+Version: V-2023.12-SP4
+Date   : Wed Apr 16 14:47:08 2025
+****************************************
+Wire Load Model Mode: top
+
+  Startpoint: enable_mul (input port clocked by clock)
+  Endpoint: y_out_reg[31]
+            (rising edge-triggered flip-flop clocked by clock)
+  Path Group: INPUTS
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fir_filter_16_tap  8000                  saed14rvt_base_tt0p8v25c
+
+  Point                                                   Incr       Path      Voltage
+  ------------------------------------------------------------------------------------
+  clock clock (rise edge)                                 0.00       0.00      
+  clock network delay (ideal)                             0.00       0.00      
+  input external delay                                    1.00       1.00 r    
+  enable_mul (in)                                         0.00       1.00 r    
+  U45/X (SAEDHVT14_BUF_S_0P5)                             0.61       1.61 r    0.72
+  m5/enable (booth_multiplier_16x16_11)                   0.00       1.61 r    
+  m5/U674/X (SAEDHVT14_BUF_S_0P5)                         0.79       2.40 r    0.72
+  m5/U390/X (SAEDHVT14_BUF_S_0P5)                         0.79       3.19 r    0.72
+  m5/U143/X (SAEDHVT14_BUF_S_0P5)                         0.70       3.89 r    0.72
+  m5/U139/X (SAEDHVT14_AN2_1)                             0.23       4.12 r    0.72
+  m5/P[0] (booth_multiplier_16x16_11)                     0.00       4.12 r    
+  add_12_root_add_0_root_add_100/A[0] (fir_filter_16_tap_DW01_add_4_DW01_add_244)
+                                                          0.00       4.12 r    
+  add_12_root_add_0_root_add_100/U3/X (SAEDHVT14_EO2_0P5)
+                                                          0.16       4.28 f    0.72
+  add_12_root_add_0_root_add_100/SUM[0] (fir_filter_16_tap_DW01_add_4_DW01_add_244)
+                                                          0.00       4.28 f    
+  add_5_root_add_0_root_add_100/A[0] (fir_filter_16_tap_DW01_add_2_DW01_add_242)
+                                                          0.00       4.28 f    
+  add_5_root_add_0_root_add_100/U3/X (SAEDHVT14_EO2_0P5)
+                                                          0.19       4.47 f    0.72
+  add_5_root_add_0_root_add_100/SUM[0] (fir_filter_16_tap_DW01_add_2_DW01_add_242)
+                                                          0.00       4.47 f    
+  add_1_root_add_0_root_add_100/B[0] (fir_filter_16_tap_DW01_add_1_DW01_add_241)
+                                                          0.00       4.47 f    
+  add_1_root_add_0_root_add_100/U3/X (SAEDHVT14_EO2_0P5)
+                                                          0.19       4.66 r    0.72
+  add_1_root_add_0_root_add_100/SUM[0] (fir_filter_16_tap_DW01_add_1_DW01_add_241)
+                                                          0.00       4.66 r    
+  add_0_root_add_0_root_add_100/B[0] (fir_filter_16_tap_DW01_add_0_DW01_add_240)
+                                                          0.00       4.66 r    
+  add_0_root_add_0_root_add_100/U2/X (SAEDHVT14_ND2_MM_0P5)
+                                                          0.11       4.78 f    0.72
+  add_0_root_add_0_root_add_100/U1/X (SAEDHVT14_INV_S_0P5)
+                                                          0.09       4.87 r    0.72
+  add_0_root_add_0_root_add_100/U1_1/CO (SAEDHVT14_ADDF_V1_1)
+                                                          0.10       4.97 r    0.72
+  add_0_root_add_0_root_add_100/U1_2/CO (SAEDHVT14_ADDF_V1_1)
+                                                          0.08       5.05 r    0.72
+  add_0_root_add_0_root_add_100/U1_3/CO (SAEDHVT14_ADDF_V1_1)
+                                                          0.08       5.14 r    0.72
+  add_0_root_add_0_root_add_100/U1_4/CO (SAEDHVT14_ADDF_V1_1)
+                                                          0.08       5.22 r    0.72
+  add_0_root_add_0_root_add_100/U1_5/CO (SAEDHVT14_ADDF_V1_1)
+                                                          0.08       5.31 r    0.72
+  add_0_root_add_0_root_add_100/U1_6/CO (SAEDHVT14_ADDF_V1_1)
+                                                          0.08       5.39 r    0.72
+  add_0_root_add_0_root_add_100/U1_7/CO (SAEDHVT14_ADDF_V1_1)
+                                                          0.08       5.48 r    0.72
+  add_0_root_add_0_root_add_100/U1_8/CO (SAEDHVT14_ADDF_V1_1)
+                                                          0.08       5.56 r    0.72
+  add_0_root_add_0_root_add_100/U1_9/CO (SAEDHVT14_ADDF_V1_1)
+                                                          0.08       5.65 r    0.72
+  add_0_root_add_0_root_add_100/U1_10/CO (SAEDHVT14_ADDF_V1_1)
+                                                          0.08       5.73 r    0.72
+  add_0_root_add_0_root_add_100/U1_11/CO (SAEDHVT14_ADDF_V1_1)
+                                                          0.08       5.81 r    0.72
+  add_0_root_add_0_root_add_100/U1_12/CO (SAEDHVT14_ADDF_V1_1)
+                                                          0.08       5.90 r    0.72
+  add_0_root_add_0_root_add_100/U1_13/CO (SAEDHVT14_ADDF_V1_1)
+                                                          0.08       5.98 r    0.72
+  add_0_root_add_0_root_add_100/U1_14/CO (SAEDHVT14_ADDF_V1_1)
+                                                          0.08       6.07 r    0.72
+  add_0_root_add_0_root_add_100/U1_15/CO (SAEDHVT14_ADDF_V1_1)
+                                                          0.08       6.15 r    0.72
+  add_0_root_add_0_root_add_100/U1_16/CO (SAEDHVT14_ADDF_V1_1)
+                                                          0.08       6.24 r    0.72
+  add_0_root_add_0_root_add_100/U1_17/CO (SAEDHVT14_ADDF_V1_1)
+                                                          0.08       6.32 r    0.72
+  add_0_root_add_0_root_add_100/U1_18/CO (SAEDHVT14_ADDF_V1_1)
+                                                          0.08       6.41 r    0.72
+  add_0_root_add_0_root_add_100/U1_19/CO (SAEDHVT14_ADDF_V1_1)
+                                                          0.08       6.49 r    0.72
+  add_0_root_add_0_root_add_100/U1_20/CO (SAEDHVT14_ADDF_V1_1)
+                                                          0.08       6.58 r    0.72
+  add_0_root_add_0_root_add_100/U1_21/CO (SAEDHVT14_ADDF_V1_1)
+                                                          0.08       6.66 r    0.72
+  add_0_root_add_0_root_add_100/U1_22/CO (SAEDHVT14_ADDF_V1_1)
+                                                          0.08       6.74 r    0.72
+  add_0_root_add_0_root_add_100/U1_23/CO (SAEDHVT14_ADDF_V1_1)
+                                                          0.08       6.83 r    0.72
+  add_0_root_add_0_root_add_100/U1_24/CO (SAEDHVT14_ADDF_V1_1)
+                                                          0.08       6.91 r    0.72
+  add_0_root_add_0_root_add_100/U1_25/CO (SAEDHVT14_ADDF_V1_1)
+                                                          0.08       7.00 r    0.72
+  add_0_root_add_0_root_add_100/U1_26/CO (SAEDHVT14_ADDF_V1_1)
+                                                          0.08       7.08 r    0.72
+  add_0_root_add_0_root_add_100/U1_27/CO (SAEDHVT14_ADDF_V1_1)
+                                                          0.08       7.17 r    0.72
+  add_0_root_add_0_root_add_100/U1_28/CO (SAEDHVT14_ADDF_V1_1)
+                                                          0.08       7.25 r    0.72
+  add_0_root_add_0_root_add_100/U1_29/CO (SAEDHVT14_ADDF_V1_1)
+                                                          0.08       7.34 r    0.72
+  add_0_root_add_0_root_add_100/U1_30/CO (SAEDHVT14_ADDF_V1_1)
+                                                          0.08       7.42 r    0.72
+  add_0_root_add_0_root_add_100/U1_31/S (SAEDHVT14_ADDF_V1_1)
+                                                          0.12       7.54 f    0.72
+  add_0_root_add_0_root_add_100/SUM[31] (fir_filter_16_tap_DW01_add_0_DW01_add_240)
+                                                          0.00       7.54 f    
+  y_out_reg[31]/D (SAEDHVT14_FDPRBQ_V2LP_1)               0.00       7.54 f    0.72
+  data arrival time                                                  7.54      
+
+  clock clock (rise edge)                                 5.00       5.00      
+  clock network delay (ideal)                             0.00       5.00      
+  y_out_reg[31]/CK (SAEDHVT14_FDPRBQ_V2LP_1)              0.00       5.00 r    
+  library setup time                                     -0.02       4.98      
+  data required time                                                 4.98      
+  ------------------------------------------------------------------------------------
+  data required time                                                 4.98      
+  data arrival time                                                 -7.54      
+  ------------------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -2.56      
+
+
+  Startpoint: y_out_reg[0]
+              (rising edge-triggered flip-flop clocked by clock)
+  Endpoint: y_out[0] (output port clocked by clock)
+  Path Group: OUTPUTS
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fir_filter_16_tap  8000                  saed14rvt_base_tt0p8v25c
+
+  Point                                                   Incr       Path      Voltage
+  ------------------------------------------------------------------------------------
+  clock clock (rise edge)                                 0.00       0.00      
+  clock network delay (ideal)                             0.00       0.00      
+  y_out_reg[0]/CK (SAEDHVT14_FDPRBQ_V2LP_1)               0.00       0.00 r    0.72
+  y_out_reg[0]/Q (SAEDHVT14_FDPRBQ_V2LP_1)                0.09       0.09 r    0.72
+  y_out[0] (out)                                          0.00       0.09 r    
+  data arrival time                                                  0.09      
+
+  clock clock (rise edge)                                 5.00       5.00      
+  clock network delay (ideal)                             0.00       5.00      
+  output external delay                                  -1.00       4.00      
+  data required time                                                 4.00      
+  ------------------------------------------------------------------------------------
+  data required time                                                 4.00      
+  data arrival time                                                 -0.09      
+  ------------------------------------------------------------------------------------
+  slack (MET)                                                        3.91      
+
+
+  Startpoint: tap6_reg[0]
+              (rising edge-triggered flip-flop clocked by clock)
+  Endpoint: y_out_reg[31]
+            (rising edge-triggered flip-flop clocked by clock)
+  Path Group: clock
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fir_filter_16_tap  8000                  saed14rvt_base_tt0p8v25c
+
+  Point                                                   Incr       Path      Voltage
+  ------------------------------------------------------------------------------------
+  clock clock (rise edge)                                 0.00       0.00      
+  clock network delay (ideal)                             0.00       0.00      
+  tap6_reg[0]/CK (SAEDHVT14_FDPRBQ_V2LP_1)                0.00       0.00 r    0.72
+  tap6_reg[0]/Q (SAEDHVT14_FDPRBQ_V2LP_1)                 0.17       0.17 f    0.72
+  m6/A[0] (booth_multiplier_16x16_10)                     0.00       0.17 f    
+  m6/U12/X (SAEDHVT14_INV_S_1)                            0.65       0.82 r    0.72
+  m6/U731/X (SAEDRVT14_DEL_R2V2_1)                        0.89       1.71 r    0.72
+  m6/U733/X (SAEDHVT14_BUF_S_0P5)                         0.54       2.25 r    0.72
+  m6/add_24_I10/U1_1_10/S (SAEDHVT14_ADDH_1)              0.22       2.47 r    0.72
+  m6/U501/X (SAEDHVT14_INV_S_0P5)                         0.33       2.80 f    0.72
+  m6/U375/X (SAEDHVT14_OAI22_0P5)                         0.45       3.25 r    0.72
+  m6/add_14_root_add_0_root_add_27_I16/A[4] (booth_multiplier_16x16_10_DW01_add_14_DW01_add_149)
+                                                          0.00       3.25 r    
+  m6/add_14_root_add_0_root_add_27_I16/U1/X (SAEDHVT14_ND2_MM_0P5)
+                                                          0.20       3.45 f    0.72
+  m6/add_14_root_add_0_root_add_27_I16/U3/X (SAEDHVT14_INV_S_0P5)
+                                                          0.12       3.58 r    0.72
+  m6/add_14_root_add_0_root_add_27_I16/U1_5/S (SAEDHVT14_ADDF_V1_1)
+                                                          0.17       3.74 f    0.72
+  m6/add_14_root_add_0_root_add_27_I16/SUM[5] (booth_multiplier_16x16_10_DW01_add_14_DW01_add_149)
+                                                          0.00       3.74 f    
+  m6/add_2_root_add_0_root_add_27_I16/A[5] (booth_multiplier_16x16_10_DW01_add_3_DW01_add_138)
+                                                          0.00       3.74 f    
+  m6/add_2_root_add_0_root_add_27_I16/U3/X (SAEDHVT14_ND2_MM_0P5)
+                                                          0.09       3.83 r    0.72
+  m6/add_2_root_add_0_root_add_27_I16/U2/X (SAEDHVT14_INV_S_0P5)
+                                                          0.09       3.92 f    0.72
+  m6/add_2_root_add_0_root_add_27_I16/U1_6/S (SAEDHVT14_ADDF_V1_1)
+                                                          0.13       4.05 r    0.72
+  m6/add_2_root_add_0_root_add_27_I16/SUM[6] (booth_multiplier_16x16_10_DW01_add_3_DW01_add_138)
+                                                          0.00       4.05 r    
+  m6/add_1_root_add_0_root_add_27_I16/B[6] (booth_multiplier_16x16_10_DW01_add_1_DW01_add_136)
+                                                          0.00       4.05 r    
+  m6/add_1_root_add_0_root_add_27_I16/U1_6/CO (SAEDHVT14_ADDF_V1_1)
+                                                          0.08       4.14 r    0.72
+  m6/add_1_root_add_0_root_add_27_I16/U1_7/CO (SAEDHVT14_ADDF_V1_1)
+                                                          0.08       4.22 r    0.72
+  m6/add_1_root_add_0_root_add_27_I16/U1_8/S (SAEDHVT14_ADDF_V1_1)
+                                                          0.13       4.35 f    0.72
+  m6/add_1_root_add_0_root_add_27_I16/SUM[8] (booth_multiplier_16x16_10_DW01_add_1_DW01_add_136)
+                                                          0.00       4.35 f    
+  m6/add_0_root_add_0_root_add_27_I16/A[8] (booth_multiplier_16x16_10_DW01_add_0_DW01_add_135)
+                                                          0.00       4.35 f    
+  m6/add_0_root_add_0_root_add_27_I16/U1_8/CO (SAEDHVT14_ADDF_V1_1)
+                                                          0.08       4.43 f    0.72
+  m6/add_0_root_add_0_root_add_27_I16/U1_9/S (SAEDHVT14_ADDF_V1_1)
+                                                          0.11       4.54 r    0.72
+  m6/add_0_root_add_0_root_add_27_I16/SUM[9] (booth_multiplier_16x16_10_DW01_add_0_DW01_add_135)
+                                                          0.00       4.54 r    
+  m6/U55/X (SAEDHVT14_AN2_1)                              0.06       4.60 r    0.72
+  m6/P[9] (booth_multiplier_16x16_10)                     0.00       4.60 r    
+  add_8_root_add_0_root_add_100/B[9] (fir_filter_16_tap_DW01_add_3_DW01_add_243)
+                                                          0.00       4.60 r    
+  add_8_root_add_0_root_add_100/U1_9/CO (SAEDHVT14_ADDF_V1_1)
+                                                          0.09       4.69 r    0.72
+  add_8_root_add_0_root_add_100/U1_10/CO (SAEDHVT14_ADDF_V1_1)
+                                                          0.08       4.78 r    0.72
+  add_8_root_add_0_root_add_100/U1_11/CO (SAEDHVT14_ADDF_V1_1)
+                                                          0.08       4.86 r    0.72
+  add_8_root_add_0_root_add_100/U1_12/CO (SAEDHVT14_ADDF_V1_1)
+                                                          0.08       4.94 r    0.72
+  add_8_root_add_0_root_add_100/U1_13/CO (SAEDHVT14_ADDF_V1_1)
+                                                          0.08       5.03 r    0.72
+  add_8_root_add_0_root_add_100/U1_14/CO (SAEDHVT14_ADDF_V1_1)
+                                                          0.08       5.11 r    0.72
+  add_8_root_add_0_root_add_100/U1_15/CO (SAEDHVT14_ADDF_V1_1)
+                                                          0.08       5.20 r    0.72
+  add_8_root_add_0_root_add_100/U1_16/CO (SAEDHVT14_ADDF_V1_1)
+                                                          0.08       5.28 r    0.72
+  add_8_root_add_0_root_add_100/U1_17/CO (SAEDHVT14_ADDF_V1_1)
+                                                          0.08       5.37 r    0.72
+  add_8_root_add_0_root_add_100/U1_18/CO (SAEDHVT14_ADDF_V1_1)
+                                                          0.08       5.45 r    0.72
+  add_8_root_add_0_root_add_100/U1_19/CO (SAEDHVT14_ADDF_V1_1)
+                                                          0.08       5.54 r    0.72
+  add_8_root_add_0_root_add_100/U1_20/CO (SAEDHVT14_ADDF_V1_1)
+                                                          0.08       5.62 r    0.72
+  add_8_root_add_0_root_add_100/U1_21/CO (SAEDHVT14_ADDF_V1_1)
+                                                          0.08       5.71 r    0.72
+  add_8_root_add_0_root_add_100/U1_22/CO (SAEDHVT14_ADDF_V1_1)
+                                                          0.08       5.79 r    0.72
+  add_8_root_add_0_root_add_100/U1_23/CO (SAEDHVT14_ADDF_V1_1)
+                                                          0.08       5.87 r    0.72
+  add_8_root_add_0_root_add_100/U1_24/CO (SAEDHVT14_ADDF_V1_1)
+                                                          0.08       5.96 r    0.72
+  add_8_root_add_0_root_add_100/U1_25/CO (SAEDHVT14_ADDF_V1_1)
+                                                          0.08       6.04 r    0.72
+  add_8_root_add_0_root_add_100/U1_26/CO (SAEDHVT14_ADDF_V1_1)
+                                                          0.08       6.13 r    0.72
+  add_8_root_add_0_root_add_100/U1_27/S (SAEDHVT14_ADDF_V1_1)
+                                                          0.13       6.26 f    0.72
+  add_8_root_add_0_root_add_100/SUM[27] (fir_filter_16_tap_DW01_add_3_DW01_add_243)
+                                                          0.00       6.26 f    
+  add_5_root_add_0_root_add_100/B[27] (fir_filter_16_tap_DW01_add_2_DW01_add_242)
+                                                          0.00       6.26 f    
+  add_5_root_add_0_root_add_100/U1_27/CO (SAEDHVT14_ADDF_V1_1)
+                                                          0.08       6.34 f    0.72
+  add_5_root_add_0_root_add_100/U1_28/S (SAEDHVT14_ADDF_V1_1)
+                                                          0.12       6.46 r    0.72
+  add_5_root_add_0_root_add_100/SUM[28] (fir_filter_16_tap_DW01_add_2_DW01_add_242)
+                                                          0.00       6.46 r    
+  add_1_root_add_0_root_add_100/B[28] (fir_filter_16_tap_DW01_add_1_DW01_add_241)
+                                                          0.00       6.46 r    
+  add_1_root_add_0_root_add_100/U1_28/CO (SAEDHVT14_ADDF_V1_1)
+                                                          0.08       6.54 r    0.72
+  add_1_root_add_0_root_add_100/U1_29/CO (SAEDHVT14_ADDF_V1_1)
+                                                          0.08       6.63 r    0.72
+  add_1_root_add_0_root_add_100/U1_30/S (SAEDHVT14_ADDF_V1_1)
+                                                          0.13       6.75 f    0.72
+  add_1_root_add_0_root_add_100/SUM[30] (fir_filter_16_tap_DW01_add_1_DW01_add_241)
+                                                          0.00       6.75 f    
+  add_0_root_add_0_root_add_100/B[30] (fir_filter_16_tap_DW01_add_0_DW01_add_240)
+                                                          0.00       6.75 f    
+  add_0_root_add_0_root_add_100/U1_30/CO (SAEDHVT14_ADDF_V1_1)
+                                                          0.08       6.84 f    0.72
+  add_0_root_add_0_root_add_100/U1_31/S (SAEDHVT14_ADDF_V1_1)
+                                                          0.11       6.95 r    0.72
+  add_0_root_add_0_root_add_100/SUM[31] (fir_filter_16_tap_DW01_add_0_DW01_add_240)
+                                                          0.00       6.95 r    
+  y_out_reg[31]/D (SAEDHVT14_FDPRBQ_V2LP_1)               0.00       6.95 r    0.72
+  data arrival time                                                  6.95      
+
+  clock clock (rise edge)                                 5.00       5.00      
+  clock network delay (ideal)                             0.00       5.00      
+  y_out_reg[31]/CK (SAEDHVT14_FDPRBQ_V2LP_1)              0.00       5.00 r    
+  library setup time                                     -0.04       4.96      
+  data required time                                                 4.96      
+  ------------------------------------------------------------------------------------
+  data required time                                                 4.96      
+  data arrival time                                                 -6.95      
+  ------------------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -1.99      
+
+
+1
