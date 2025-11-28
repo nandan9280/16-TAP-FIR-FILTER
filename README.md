@@ -53,7 +53,6 @@ The project is organized to follow a typical Synopsys-based flow:
      - Placement
      - Clock tree synthesis (CTS)
      - Routing
-   - Design databases and logs are stored in `physical_design/lib/` and `physical_design/report/`.
 
 4. **Static Timing Analysis (PrimeTime)**  
    - Uses final routed netlist and extracted parasitics.  
@@ -92,7 +91,6 @@ physical_design/
   route.tcl
   mcmm.tcl
   post_route_reports.tcl
-  lib/                         # NDM libs, tech/parasitic files
   report/                      # DRC, timing, log files
 
 PrimeTime/
