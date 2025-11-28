@@ -1,4 +1,4 @@
-# ASIC Implementation of a 16-Tap FIR Low-Pass Filter (RTL to Signoff + UPF Low-Power Flow)
+# ASIC Implementation of a 16-Tap FIR Low-Pass Filter (RTL to Routing + UPF Low-Power Flow)
 
 ASIC implementation of a **16-tap FIR (Finite Impulse Response) low-pass filter**, taken all the way from **RTL to signoff** using a standard industrial flow:
 
